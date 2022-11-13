@@ -1,0 +1,17 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/nav.ejs %>
+  
+  <!-- Main Content -->
+  <main class="container">
+    
+    <div id="home_content">
+      <% if (title == "Home") { %>
+        <%- include partials/home.ejs %>
+      <% } %>
+
+    </div>
+      
+  </main>
+
+<%- include partials/footer.ejs %> 
