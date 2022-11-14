@@ -11,3 +11,31 @@
     position: absolute;
     clear: both;
 }
+
+.survey-container{
+    width: 980px;
+    margin: auto;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.survey-container h1, h4{
+    color: #6A7BA2;
+    font-weight: bold;
+}
+
+.survey-container form{
+    background-color: #6A7BA2;
+    color: #FFDFDE;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.Question{
+    padding-top: 15px;
+}
+
+.Question p{
+    font-weight: bold;
+    font-size: 1.2em;
+}
