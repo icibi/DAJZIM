@@ -31,4 +31,12 @@ router.get('/createsurvey', function(req, res, next) {
   res.render('index', { title: 'CreateSurvey' });
 });
 
+router.get('/template1', function(req, res, next) {
+  res.render('index', { title: 'Template 1' });
+});
+
+router.get('/template2', function(req, res, next) {
+  res.render('index', { title: 'Template 2' });
+});
+
 module.exports = router;
