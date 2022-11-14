@@ -1,8 +1,13 @@
 /* CSS for home page content */
 #home_content {
-    padding: 150px 0;
-    text-align: center;
+    padding: 100px 0;
+    align-content: center;
     margin: auto;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+#computer {
+    position: absolute;
+    clear: both;
 }
