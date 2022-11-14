@@ -13,7 +13,7 @@ router.get('/home', function(req, res, next) {
 
 /* GET templates page. */
 router.get('/templates', function(req, res, next) {
-  res.render('index', { title: 'Templates' });
+  res.render('template', { title: 'Templates' });
 });
 
 /* GET pricing page. */
