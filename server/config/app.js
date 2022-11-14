@@ -4,6 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
+
+// point mongoose to the DB URI
+mongoose.connect(process.env.URI || DB.URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', ()=>{
+  console.log('Database Connected...');
+});
+
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 
