@@ -1,64 +1,112 @@
-<h2>Survey Template No.2 </h2>
-<hr style="border-style: solid; border-color: rgb(27, 27, 27); border-width: 1px;"> 
+<%- include header.ejs %> 
+<%- include nav.ejs %>
 
-<button type="button" class="btn btn-primary">Add your Questions</button>
-<button type="button" class="btn btn-primary">Edit your Questions</button>
+<style>
+h2 {text-align: center;}
+div {text-align: left;}
+body {
+  background-color: #F9EBDE;
+  color: #815854;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.border{border-color: #815854;}
+</style>
+
+<div style="width: 980px; margin-left: auto; margin-right: auto; color: #815854;">
+<body>
+
+<!-- Main Content -->
+<div class="survey-container">
+
+<h1>Customer Service Survey form</h1>
+
+<form>
+<fieldset>
+<div class="Question">
+<p>Q1: Name of the employee that assisted you</p>
+<input class="form-control" type="text" placeholder="Employee Name">
+</div>
+
+
+<div class="Question">
+<p>Q2:  Overall, how would you rate the quality of your customer service experience?</p>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService1" value="Excellent">
+<label class="form-check-label" for="inputService1">Excellent</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService2" value="Good">
+<label class="form-check-label" for="inputService2">Good</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService3" value="Poor">
+<label class="form-check-label" for="inputService3">Poor</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService5" value="VeryPoor">
+<label class="form-check-label" for="inputService5">Very Poor</label>
+</div>
+</div>
+
+
+<div class="Question">
+<p>Q3: How well did we understand your questions and concerns?</p>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService1" value="Excellent">
+<label class="form-check-label" for="inputService1">Excellent</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService2" value="Good">
+<label class="form-check-label" for="inputService2">Good</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService3" value="Poor">
+<label class="form-check-label" for="inputService3">Poor</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="inputService" id="inputService5" value="VeryPoor">
+<label class="form-check-label" for="inputService5">Very Poor</label>
+</div>
+</div>
+
+
+<div class="Question">
+<p>Q4: How much time did it take us to address your questions and concerns</p>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="period" id="period1" value="Too Long">
+<label class="form-check-label" for="period1">Too Long</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="period" id="period2" value="Long">
+<label class="form-check-label" for="period2">Long</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="period" id="period3" value="Quick">
+<label class="form-check-label" for="period3">Quick</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" name="period" id="period4" value="Very Quick">
+<label class="form-check-label" for="period4">Very Quick</label>
+</div>
+</div>
+
+
+<div class="Question">
+<p>Q5: Do you have any other comments, questions, or concerns?</p>
+<input class="form-control" type="text" placeholder="Additional Information">
+</div>  
+</fieldset>
+</form>
+</div>
+
+<button type="button" class="btn btn-primary">Add your Answers</button>
+<button type="button" class="btn btn-primary">Edit your Answers</button>
 <br><br>
 
-<fieldset class="border">
-<form>
-<div class="question">
 
-<h3>Question 1</h3>
-<input type="radio" id="stronglyAgree" value="stronglyAgree" name="question1" />
-<label for="stronglyAgree">Strongly Agree</label>
-<input type="radio" id="agree" value="agree" name="question1" />
-<label for="agree">Agree</label>
-<input type="radio" id="disagree" value="disagree" name="question1" />
-<label for="disagree">Disagree</label>
-<input type="radio" id="stronglyDisagree" value="stronglyDisagree" name="question1" />
-<label for="stronglyDisagree">Strongly Disagree</label>
 
-<h3>Question 2</h3>
-<input type="radio" id="stronglyAgree" value="stronglyAgree" name="question2" />
-<label for="stronglyAgree">Strongly Agree</label>
-<input type="radio" id="agree" value="agree" name="question2" />
-<label for="agree">Agree</label>
-<input type="radio" id="disagree" value="disagree" name="question2" />
-<label for="disagree">Disagree</label>
-<input type="radio" id="stronglyDisagree" value="stronglyDisagree" name="question2" />
-<label for="stronglyDisagree">Strongly Disagree</label>
 
-<h3>Question 3</h3>
-<input type="radio" id="stronglyAgree" value="stronglyAgree" name="question3" />
-<label for="stronglyAgree">Strongly Agree</label>
-<input type="radio" id="agree" value="agree" name="question3" />
-<label for="agree">Agree</label>
-<input type="radio" id="disagree" value="disagree" name="question3" />
-<label for="disagree">Disagree</label>
-<input type="radio" id="stronglyDisagree" value="stronglyDisagree" name="question3" />
-<label for="stronglyDisagree">Strongly Disagree</label>
-
-<h3>Question 4</h3>
-<input type="radio" id="stronglyAgree" value="stronglyAgree" name="question4" />
-<label for="stronglyAgree">Strongly Agree</label>
-<input type="radio" id="agree" value="agree" name="question4" />
-<label for="agree">Agree</label>
-<input type="radio" id="disagree" value="disagree" name="question4" />
-<label for="disagree">Disagree</label>
-<input type="radio" id="stronglyDisagree" value="stronglyDisagree" name="question4" />
-<label for="stronglyDisagree">Strongly Disagree</label>
-
-<h3>Question 4</h3>
-<input type="radio" id="stronglyAgree" value="stronglyAgree" name="question5" />
-<label for="stronglyAgree">Strongly Agree</label>
-<input type="radio" id="agree" value="agree" name="question5" />
-<label for="agree">Agree</label>
-<input type="radio" id="disagree" value="disagree" name="question5" />
-<label for="disagree">Disagree</label>
-<input type="radio" id="stronglyDisagree" value="stronglyDisagree" name="question5" />
-<label for="stronglyDisagree">Strongly Disagree</label>
-
-<br><br></div>
-</form>
-</fieldset>
+</body>
+ 
+<%- include footer.ejs %>
