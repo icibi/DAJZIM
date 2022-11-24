@@ -46,3 +46,12 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
+th{
+    text-align: center;
+}
+
+.templates{
+    margin-left: auto;
+    margin-right: auto;
+}
