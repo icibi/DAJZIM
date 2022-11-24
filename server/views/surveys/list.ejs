@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/nav.ejs %>
+  
+
+<!-- Main Content -->
+<main class="container">
+  <section id="survey">
+
+    <div class="row">
+      <div class="col-md-offset-3 col-md-8">
+        <h1 id="survey_title"><%=title %></h1>
+        <% if(typeof displayName == 'string' && displayName) { %>
+  
+        <!-- <a href="/createsurvey/add" class="btn btn-primary" role="button">
+        <i class ="fas fa-plus-circle"></i> Add Surveys -->
+        <%}%>
+        </a>
+        <br />
+        <table class="table table-bordered table-striped table-hover">
+          <!--HEader row-->
+          <tr>
+            <th class="text-center">Survey Type</th>
+            <th class="text-center">Q1-Answer</th>
+            <th class="text-center">Q2-Answer</th>
+            <th class="text-center">Q3-Answer</th>
+            <th class="text-center">Q4-Answer</th>
+            <th class="text-center">Q5-Answer</th>
+            
+            <% if(typeof displayName == 'string' && displayName) { %>
+  
+            <th class="text-center"></th>
+            <th class="text-center"></th>
+            <%}%>
+          </tr>
+  
+          <!--Repeatable Template row-->
+          <% for (let count=0; count<Survey_List.length; count++){%>
+            <tr>
+              <td class="text-centre "><%=Survey_List[count].surveyType %></td>
+              <td class="text-centre "><%=Survey_List[count].answer1 %></td>
+              <td class="text-centre "><%=Survey_List[count].answer2 %></td>
+              <td class="text-centre "><%=Survey_List[count].answer3 %></td>
+              <td class="text-centre "><%=Survey_List[count].answer4 %></td>
+              <td class="text-centre "><%=Survey_List[count].answer5 %></td>
+
+              <% if(typeof displayName == 'string' && displayName) { %>
+              <td class="text-center col-1">
+                <a href="/surveylist/edit/<%= Survey_List[count]._id %>" class="btn btn-primary btn-sm">
+                <i class="fas fa-pencil-alt"></i> Edit</a>
+              </td>
+              <td class="text-center col-1">
+                  <a href="/surveylist/delete/<%= Survey_List[count]._id %>" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt"></i> Delete</a>
+              </td>
+            <%}%>
+            </tr>
+          <%}%>
+        </table>
+      </div>
+    </div>
+</section>
+</main>
+  
+
+<!--HTML Footer part-->
+<%- include ../partials/footer.ejs %> 
