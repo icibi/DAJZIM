@@ -13,7 +13,7 @@
 }
 
 .survey-container{
-    width: 980px;
+    width: auto;
     margin: auto;
     align-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -21,6 +21,7 @@
 
 .survey-container h1{
     color: #6A7BA2;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
 }
@@ -30,6 +31,11 @@
     color: #FFDFDE;
     padding: 2em;
     border-radius: 10px;
+}
+
+.survey-container label[for="type"] {
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .Question{

@@ -23,7 +23,7 @@ module.exports.displaysurveyList = (req, res, next) => {
 
 module.exports.template1page = (req, res, next) =>{
   res.render("surveys/template1", {
-    title:"Marketing Survey",
+    title:"Nespresso - Customer Satisfaction Survey",
     displayName: req.user ? req.user.displayName : "",
   });
 };
