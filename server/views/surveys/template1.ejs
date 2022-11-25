@@ -9,15 +9,21 @@
 
       <form class="form" method="post">
 
-        <label for="type">Survey Type</label>
+        <p class="instruction">Thank you for using our product. <br> Please respond to the survey below to improve the quality</p>
         <div class="from-group">
-          <input class="form-check-input" type="radio" name="surveyType" id="surveyType" value="Marketing" checked >
-          <label class="form-check-label" for="surveyType">Marketing</label>
+          <input class="form-check-input" type="hidden" name="surveyType" id="surveyType" value="Marketing" checked >
+          <!-- <label class="form-check-label" for="surveyType">Marketing</label> -->
         </div>
 
 
         <div class="from-group">
-            <label for="question1">Q1: What is your gender?</label><br>
+          <label for="question0">Q1: What is your name?</label><br>
+          <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0"  />
+
+      </div>
+
+        <div class="from-group">
+            <label for="question1">Q2: What is your gender?</label><br>
             <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Male" />
                 <label class="form-check-label" for="inputGenderM">Male</label>
@@ -33,12 +39,12 @@
         </div>
 
         <div class="from-group">
-          <label for="question2">Q2: What is your age?</label><br>
+          <label for="question2">Q3: What is your age?</label><br>
           <input type="text" class="form-control" id="question2" placeholder="Enter your age" name="question2"  />
         </div>
 
         <div class="from-group">
-          <label for="question3">Q3: How often do you use?</label><br>
+          <label for="question3">Q4: How often do you use?</label><br>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Everyday" >
                 <label class="form-check-label" for="frequency1">Everyday</label>
@@ -62,7 +68,7 @@
         </div>
 
         <div class="from-group">
-            <label for="question4">Q4: For how long have you been using our service/product?</label><br>
+            <label for="question4">Q5: For how long have you been using our service/product?</label><br>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Less than a month">
                 <label class="form-check-label" for="periodOfUsing1">Less than a month</label>
@@ -85,7 +91,7 @@
             </div>
           </div>
           <div class="from-group">
-            <label for="question5">Q5: How satisfied are you with the service/product?</label><br>
+            <label for="question5">Q6: How satisfied are you with the service/product?</label><br>
             <select name="question5" class="form-control" id="ageRange">
                 <option selected>Choose...</option>
                 <option value="Very satisfied">Very satisfied</option>
@@ -95,6 +101,7 @@
                 <option value="Very Unsatisfied">Very Unsatisfied</option>
             </select>
           </div>
+          <br>
         <button class="btn btn-primary" type="submit">
           <i class="fas fa-edit"></i>Submit
         </button>
