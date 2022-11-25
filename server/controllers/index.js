@@ -34,6 +34,7 @@ module.exports.displaysurveyListpage = (req, res, next) => {
     displayName: req.user ? req.user.displayName : "",
   });
 };
+
 // module.exports.displaycontactpage = (req, res, next) => {
 //   res.render("index", {
 //     title: "Contact Me",
@@ -54,7 +55,8 @@ module.exports.displayLoginPage = (req, res, next) => {
   }
 };
 
-module.exports.processLoginPage = (req, res, next) => {
+// link to surveylist page 
+module.exports.processLoginPageToSurveyList = (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     // server err?
     if (err) {
@@ -63,7 +65,7 @@ module.exports.processLoginPage = (req, res, next) => {
     // is there a user login error?
     if (!user) {
       req.flash("loginMessage", "Authentication Error");
-      return res.redirect("/login");
+      return res.redirect("/surveylist/login");
     }
     req.login(user, (err) => {
       // server error?
@@ -71,6 +73,163 @@ module.exports.processLoginPage = (req, res, next) => {
         return next(err);
       }
       return res.redirect("/surveylist");
+    });
+  })(req, res, next);
+};
+
+
+// link to surveylist1 page 
+module.exports.processLoginPageToSurveyList1 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/surveylist1/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/surveylist1");
+    });
+  })(req, res, next);
+};
+
+
+// link to surveylist2 page 
+module.exports.processLoginPageToSurveyList2 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/surveylist2/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/surveylist2");
+    });
+  })(req, res, next);
+};
+
+
+// link to surveylist3 page 
+module.exports.processLoginPageToSurveyList3 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/surveylist3/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/surveylist3");
+    });
+  })(req, res, next);
+};
+
+// link to template 1 page
+module.exports.processLoginPageToTemp1 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/template1/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/template1");
+    });
+  })(req, res, next);
+};
+
+// link to template 2 page
+module.exports.processLoginPageToTemp2 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/template2/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/template2");
+    });
+  })(req, res, next);
+};
+
+// link to template 3 page
+module.exports.processLoginPageToTemp3 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/template3/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/template3");
+    });
+  })(req, res, next);
+};
+
+// link to template 4 page
+module.exports.processLoginPageToTemp4 = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/template4/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/template4");
     });
   })(req, res, next);
 };
@@ -118,7 +277,7 @@ module.exports.processRegisterPage = (req, res, next) => {
       // redirect the user and authenticate them
 
       return passport.authenticate("local")(req, res, () => {
-        res.redirect("/surveylist");
+        res.redirect("/");
       });
     }
   });
