@@ -6,16 +6,18 @@
     font-size: 1.2em;
     font-weight: bold;
 }
+
+#pricing_heading {
+    position: relative;
+    top: -200px;
+    text-align: center;
+}
   
 #pricing_content {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     text-align: center;
-}
-
-.pricing_container {
-    display: flex;
 }
 
 .pricing {
