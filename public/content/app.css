@@ -1,4 +1,7 @@
 /* CSS for home page content */
+body{
+}
+
 #home_content {
     padding: 100px 0;
     align-content: center;
@@ -29,6 +32,7 @@
     width: auto;
     margin: auto;
     align-content: center;
+    padding-top: 5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -46,19 +50,14 @@
     border-radius: 10px;
 }
 
-.survey-container label[for="type"] {
-    font-weight: bold;
-    font-size: 1em;
+
+
+
+.from-group{
+    padding-top: 10px;
 }
 
-.Question{
-    padding-top: 15px;
-}
 
-.Question p{
-    font-weight: bold;
-    font-size: 1.2em;
-}
 
 th{
     text-align: center;
@@ -68,3 +67,4 @@ th{
     margin-left: auto;
     margin-right: auto;
 }
+

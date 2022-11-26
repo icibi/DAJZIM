@@ -75,13 +75,14 @@ function requireAuthS4(req, res, next) {
 // for template1
 
 /* GET Route for the survey List page - READ Operation */
-router.get("/surveylist", requireAuthT1,  surveyController.displaysurveyList);
+router.get("/surveylist", requireAuthS1,  surveyController.displaysurveyList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get("/template1", requireAuthT1, surveyController.template1page);
 
 /* POST Route for processing the Add page - CREATE Operation */
 router.post("/template1",  requireAuthT1, surveyController.template1processpage);
+
 
 /* GET Route for displaying the Edit page - UPDATE Operation */
 router.get("/surveylist/edit/:id", requireAuthS1, surveyController.displayeditpage);
@@ -97,13 +98,13 @@ router.get("/surveylist/delete/:id", requireAuthS1, surveyController.deletepage)
 // template 2
 
 /* GET Route for the survey List page - READ Operation */
-router.get("/surveylist1", requireAuthT2,  surveyController.displaysurvey1List);
+router.get("/surveylist1", requireAuthS2,  surveyController.displaysurvey1List);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get("/template2", requireAuthT2, surveyController.template2page);
-
 /* POST Route for processing the Add page - CREATE Operation */
 router.post("/template2",  requireAuthT2, surveyController.template2processpage);
+
 /* GET Route for displaying the Edit page for template2- UPDATE Operation */
 router.get("/surveylist1/edit/:id", requireAuthS2, surveyController.displayeditpage1);
 
@@ -117,7 +118,7 @@ router.get("/surveylist1/delete/:id", requireAuthS2, surveyController.deletepage
 // template 3 
 
 /* GET Route for the survey List page - READ Operation */
-router.get("/surveylist2", requireAuthT3,  surveyController.displaysurvey2List);
+router.get("/surveylist2", requireAuthS3,  surveyController.displaysurvey2List);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get("/template3", requireAuthT3, surveyController.template3page);
@@ -136,7 +137,7 @@ router.get("/surveylist2/delete/:id", requireAuthS3, surveyController.deletepage
 // template 4
 
 /* GET Route for the survey List page - READ Operation */
-router.get("/surveylist3", requireAuthT4,  surveyController.displaysurvey3List);
+router.get("/surveylist3", requireAuthS4,  surveyController.displaysurvey3List);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get("/template4", requireAuthT4, surveyController.template4page);
