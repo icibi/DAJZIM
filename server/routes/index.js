@@ -20,11 +20,56 @@ router.get("/templates", indexController.displaytemplatespage);
 router.get("/pricing", indexController.displaypricingpage);
 
 
+/* link to /template1/login */
 /* GET Route for displaying the Login page */
-router.get("/login", indexController.displayLoginPage);
-
+router.get("/template1/login", indexController.displayLoginPage);
 /* POST Route for processing the Login page */
-router.post("/login", indexController.processLoginPage);
+router.post("/template1/login", indexController.processLoginPageToTemp1);
+
+
+/* link to /template2/login */
+/* GET Route for displaying the Login page */
+router.get("/template2/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/template2/login", indexController.processLoginPageToTemp2);
+
+/* link to /template3/login */
+/* GET Route for displaying the Login page */
+router.get("/template3/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/template3/login", indexController.processLoginPageToTemp3);
+
+
+/* link to /template4/login */
+/* GET Route for displaying the Login page */
+router.get("/template4/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/template4/login", indexController.processLoginPageToTemp4);
+
+/* link to /surveylist/login */
+/* GET Route for displaying the Login page */
+router.get("/surveylist/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/surveylist/login", indexController.processLoginPageToSurveyList);
+
+/* link to /surveylist1/login */
+/* GET Route for displaying the Login page */
+router.get("/surveylist1/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/surveylist1/login", indexController.processLoginPageToSurveyList1);
+
+/* link to /surveylist2/login */
+/* GET Route for displaying the Login page */
+router.get("/surveylist2/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/surveylist2/login", indexController.processLoginPageToSurveyList2);
+
+/* link to /surveylist3/login */
+/* GET Route for displaying the Login page */
+router.get("/surveylist3/login", indexController.displayLoginPage);
+/* POST Route for processing the Login page */
+router.post("/surveylist3/login", indexController.processLoginPageToSurveyList3);
+
 
 /* GET Route for displaying the Register page */
 router.get("/register", indexController.displayRegisterPage);
