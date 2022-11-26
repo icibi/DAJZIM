@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 
-// create a model class
-let survey = mongoose.Schema(
+
+let survey3 = mongoose.Schema(
   {
     surveyType: String,
     answer1: String,
@@ -12,8 +12,8 @@ let survey = mongoose.Schema(
     answer6: String,
   },
   {
-    collection: "surveys",
+    collection: "surveys3",
   }
 );
 
-module.exports = mongoose.model("survey", survey);
+module.exports = mongoose.model("survey3", survey3);
