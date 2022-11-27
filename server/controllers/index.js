@@ -28,12 +28,12 @@ module.exports.displaypricingpage = (req, res, next) => {
   });
 };
 
-module.exports.displaysurveyListpage = (req, res, next) => {
-  res.render("index", {
-    title: "SurveyList",
-    displayName: req.user ? req.user.displayName : "",
-  });
-};
+// module.exports.displaysurveyListpage = (req, res, next) => {
+//   res.render("index", {
+//     title: "SurveyList",
+//     displayName: req.user ? req.user.displayName : "",
+//   });
+// };
 
 // module.exports.displaycontactpage = (req, res, next) => {
 //   res.render("index", {
