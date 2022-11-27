@@ -2,6 +2,7 @@
 <%- include ../partials/nav.ejs %>
   
 
+
 <!-- Main Content -->
 <main class="container">
   <section id="survey">
@@ -20,6 +21,8 @@
           <!--HEader row-->
           <tr>
             <th class="text-center col-3">Survey Type</th>
+            <th class="text-center col-3">Name</th>
+
             <th class="text-center col-3">Current Student</th>
             <th class="text-center col-3">Field of Interest</th>
             <th class="text-center col-4">Previous education</th>
@@ -38,11 +41,12 @@
           <% for (let count=0; count<Survey_List2.length; count++){%>
             <tr>
               <td class="text-centre col-3"><%=Survey_List2[count].surveyType %></td>
+              <td class="text-centre col-3"><%=Survey_List2[count].answer1 %></td>
               <td class="text-centre col-3"><%=Survey_List2[count].answer2 %></td>
               <td class="text-centre col-3"><%=Survey_List2[count].answer3 %></td>
               <td class="text-centre col-4"><%=Survey_List2[count].answer4 %></td>
               <td class="text-centre col-4"><%=Survey_List2[count].answer5 %></td>
-              <td class="text-centre col-3"><%=Survey_List2[count].answer6 %></td>
+             <td class="text-centre col-3"><%=Survey_List2[count].answer6 %></td> 
            
 
               <% if(typeof displayName == 'string' && displayName) { %>
@@ -62,7 +66,9 @@
     </div>
 </section>
 </main>
-  
+
+
+
 
 <!--HTML Footer part-->
 <%- include ../partials/footer.ejs %> 
