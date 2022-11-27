@@ -2,114 +2,82 @@
 <%- include ../partials/nav.ejs %>
 
 
-
-<style>
- 
-        /* Styling the Body element i.e. Color,
-        Font, Alignment */
-        body {
-            background-color: gray;
-            
-            text-align: center;
-        }
- 
-        /* Styling the Form (Color, Padding, Shadow) */
-        form {
-            background-color: #fff;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-
-        }
- 
-    /* Styling Button */
-        button {
-            background-color: #05c46b;
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    </style>
-
-<link rel="stylesheet" href="content/app.css">
-
-<!-- Content  for the add page -->
-
-  <div class="row">
+ <div class="row">
     <div class="offset-md-3 col-md-6">
       <h1 id="business_title"><%=title %></h1>
 
       <form class="form" method="post">
 
-        <!--<label for="type">Survey Type</label>-->
-        <div class="#">
-          <input class="form-check-input" type="radio" name="surveyType" id="surveyType" value="Student" checked >
-          <label class="form-check-label" for="surveyType">Student</label>
-        </div>
-        <br>
+        
+
+        <label for="type">Survey Type</label>
+            <div class="from-group">
+              <input class="form-check-input" type="hidden" name="surveyType" id="surveyType" value="Student" checked >
+              </div>
 
 
         <div class="from-group">
-           <div class="Q1"> <label for="question2">Are you current student?</label><br></div>
+          <label for="question0">Q1: What is your name?</label><br>
+          <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0"  />
+
+      </div>
+
+        <div class="from-group">
+           <div class="Q1"> <label for="question1">Are you current student?</label><br></div>
             <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="currentstatus" name="question1" value="Yes" />
                 <label class="form-check-label" for="currentstatus">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="currentstatus" name="question2" value="No" />
+                <input type="checkbox" class="form-check-input" id="currentstatus" name="question1" value="No" />
                 <label class="form-check-label" for="currentstatus">No</label>
             </div>
             </div>
-<br>
+
         <div class="from-group">
-          <div class="Q2"><label for="question3">Enter your field of Interest</label><br></div>
-          <input type="text" class="form-control" id="question3" placeholder="Interest" name="question3"  />
+          <div class="Q2"><label for="question2">Enter your field of Interest</label><br></div>
+          
+          <input type="text" class="form-control" id="question2" placeholder="Interest" name="question2"  />
         </div>
-<br>
+
         <div class="from-group">
-         <div class="Q3"> <label for="question4">What previous education do you have?</label><br></div>
+         <div class="Q3"> <label for="question3">What previous education do you have?</label><br></div>
           <br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question4" id="h1" value="High School" >
+                <input class="form-check-input" type="radio" name="question3" id="h1" value="High School" >
                 <label class="form-check-label" for="h1">High School</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question4" id="h2" value="College diploma">
+                <input class="form-check-input" type="radio" name="question3" id="h2" value="College diploma">
                 <label class="form-check-label" for="h2">College diploma</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question4" id="h3" value="Degree">
+                <input class="form-check-input" type="radio" name="question3" id="h3" value="Degree">
                 <label class="form-check-label" for="h3">Degree</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question4" id="h4" value="None">
+                <input class="form-check-input" type="radio" name="question3" id="h4" value="None">
                 <label class="form-check-label" for="frequency4">None</label>
             </div>
         </div>
 <br>
         <div class="from-group">
-            <div class="Q4"><label for="question5">Which is your favorite sport?</label><br></div>
+            <div class="Q4"><label for="question4">Which is your favorite sport?</label><br></div>
             <br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question5" id="g1" value="Cricket">
+                <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
                 <label class="form-check-label" for="g1">Cricket</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question5" id="g2" value="Football">
+                <input class="form-check-input" type="checkbox" name="question4" id="g2" value="Football">
                 <label class="form-check-label" for="g2">Football</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question5" id="g3" value="badminton">
+                <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton">
                 <label class="form-check-label" for="g3">badminton</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question5" id="g4" value="None">
+                <input class="form-check-input" type="checkbox" name="question4" id="g4" value="None">
                 <label class="form-check-label" for="g4">None</label>
             </div>
           
@@ -119,7 +87,7 @@
           <div class="from-group">
            <div class="Q5"> <label for="question5">How satisfied you are with the studies that you did so far?</label><br></div>
             <br>
-            <select name="question6" class="form-control" id="ageRange">
+            <select name="question5" class="form-control" id="ageRange">
                 <option selected>Select</option>
                 <option value="Very satisfied">Very satisfied</option>
                 <option value="Satisfied">Satisfied</option>
@@ -128,7 +96,7 @@
                 <option value="Very Unsatisfied">Very Unsatisfied</option>
             </select>
           </div>
-  <br>      
+          <br>
         <button class="btn btn-primary" type="submit">
           <i class="fas fa-edit"></i>Submit
         </button>
@@ -139,6 +107,16 @@
       </form>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
 
 <!--HTML Footer part-->
 <%- include ../partials/footer.ejs %> 
