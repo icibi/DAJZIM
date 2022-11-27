@@ -1,37 +1,5 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/nav.ejs %>
-
-    <style>
-        body {
-            background-color: gray;
-            
-            text-align: left;
-        }
-
-        form {
-            background-color:olivedrab;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-
-        }
-
-        button {
-            background-color:royalblue;
-            border: 1px solid white;
-            border-radius: 2px;
-            font-family: inherit;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    </style>
-
-<link rel="stylesheet" href="content/app.css">
-
 <!-- Content  for the add page -->
 
   <div class="row">
@@ -130,12 +98,13 @@
             </div>
 <br>
    
-        <button class="btn btn-primary" type="submit">
-          <i class="fas fa-edit"></i>Submit
-        </button>
-        <button style="background-color:red ;"><a href="/templates" class="btn btn-outline-warning">
-            <i class="fas fa-undo"></i>Cancel
-        </a></button>
+            <button class="btn btn-outline-light" type="submit">
+              <i class="fas fa-edit"></i>Submit
+            </button>
+
+            <a href="/templates" class="btn btn-outline-warning">
+              <i class="fas fa-undo"></i>Cancel
+            </a>
       </form>
     </div>
   </div>
