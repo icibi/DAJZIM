@@ -151,7 +151,7 @@ router.get("/surveylist3/edit/:id", requireAuthS4, surveyController.displayeditp
 router.post("/surveylist3/edit/:id", requireAuthS4, surveyController.processingeditpage3);
 
 /* GET to perform  Deletion for template2 - DELETE Operation */
-router.get("/surveylist1/delete/:id", requireAuthS4, surveyController.deletepage1);
+router.get("/surveylist3/delete/:id", requireAuthS4, surveyController.deletepage3);
 
 
 module.exports = router;
