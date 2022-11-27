@@ -113,7 +113,7 @@ module.exports.template1processpage = (req, res, next) =>{
 // for template2
 module.exports.template2page = (req, res, next) =>{
   res.render("surveys/template2", {
-    title:"ddd",
+    title:"Customer Satisfaction Survey - Ardene",
     displayName: req.user ? req.user.displayName : "",
   });
 };
