@@ -9,16 +9,18 @@ body{
     font-size: 1.2em;
     font-weight: bold;
 }
+
+#pricing_heading {
+    position: relative;
+    top: -200px;
+    text-align: center;
+}
   
 #pricing_content {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     text-align: center;
-}
-
-.pricing_container {
-    display: flex;
 }
 
 .pricing {
@@ -50,21 +52,42 @@ body{
     border-radius: 10px;
 }
 
-
-
+.temp1, .temp2, .temp3, .temp4{
+    border-radius: 50%;
+    width: 380px;
+}
 
 .from-group{
     padding-top: 10px;
 }
 
-
-
-th{
+td{
+    padding: 30px;
     text-align: center;
 }
 
 .templates{
     margin-left: auto;
     margin-right: auto;
+}
+
+.Q1{
+ 
+    font-weight: bold;
+}
+.Q2{
+    font-weight: bold;
+}
+
+.Q3{
+    font-weight: bold;
+}
+
+.Q4{
+    font-weight: bold;
+}
+
+.Q5{
+    font-weight: bold;
 }
 

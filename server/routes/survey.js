@@ -125,10 +125,10 @@ router.get("/template3", requireAuthT3, surveyController.template3page);
 /* POST Route for processing the Add page - CREATE Operation */
 router.post("/template3",  requireAuthT3, surveyController.template3processpage);
 /* GET Route for displaying the Edit page for template2- UPDATE Operation */
-router.get("/surveylist2/edit/:id", requireAuthS3, surveyController.displayeditpage2);
+router.get("/surveylist2/edit2/:id", requireAuthS3, surveyController.displayeditpage2);
 
 /* POST Route for processing the Edit page for template2- UPDATE Operation */
-router.post("/surveylist2/edit/:id", requireAuthS3, surveyController.processingeditpage2);
+router.post("/surveylist2/edit2/:id", requireAuthS3, surveyController.processingeditpage2);
 
 /* GET to perform  Deletion for template2 - DELETE Operation */
 router.get("/surveylist2/delete/:id", requireAuthS3, surveyController.deletepage2);
