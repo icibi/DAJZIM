@@ -19,13 +19,13 @@
         <table class="table table-bordered table-striped table-hover">
           <!--HEader row-->
           <tr>
-            <th class="text-center">Survey Type</th>
-            <th class="text-center">Q1-Answer</th>
-            <th class="text-center">Q2-Answer</th>
-            <th class="text-center">Q3-Answer</th>
-            <th class="text-center">Q4-Answer</th>
-            <th class="text-center">Q5-Answer</th>
-            <th class="text-center">Q6-Answer</th>
+            <th class="text-center col-3">Survey Type</th>
+            <th class="text-center col-3">Current Student</th>
+            <th class="text-center col-3">Field of Interest</th>
+            <th class="text-center col-4">Previous education</th>
+            <th class="text-center col-4">Favorite sport</th>
+            <th class="text-center col-3">Satisfied</th>
+           
             
             <% if(typeof displayName == 'string' && displayName) { %>
   
@@ -35,23 +35,23 @@
           </tr>
   
           <!--Repeatable Template row-->
-          <% for (let count=0; count<Survey_List.length; count++){%>
+          <% for (let count=0; count<Survey_List2.length; count++){%>
             <tr>
-              <td class="text-centre "><%=Survey_List[count].surveyType %></td>
-              <td class="text-centre "><%=Survey_List[count].answer1 %></td>
-              <td class="text-centre "><%=Survey_List[count].answer2 %></td>
-              <td class="text-centre "><%=Survey_List[count].answer3 %></td>
-              <td class="text-centre "><%=Survey_List[count].answer4 %></td>
-              <td class="text-centre "><%=Survey_List[count].answer5 %></td>
-              <td class="text-centre "><%=Survey_List[count].answer6 %></td>
+              <td class="text-centre col-3"><%=Survey_List2[count].surveyType %></td>
+              <td class="text-centre col-3"><%=Survey_List2[count].answer2 %></td>
+              <td class="text-centre col-3"><%=Survey_List2[count].answer3 %></td>
+              <td class="text-centre col-4"><%=Survey_List2[count].answer4 %></td>
+              <td class="text-centre col-4"><%=Survey_List2[count].answer5 %></td>
+              <td class="text-centre col-3"><%=Survey_List2[count].answer6 %></td>
+           
 
               <% if(typeof displayName == 'string' && displayName) { %>
               <td class="text-center col-1">
-                <a href="/surveylist2/edit/<%= Survey_List[count]._id %>" class="btn btn-primary btn-sm">
+                <a href="/surveylist2/edit2/<%= Survey_List2[count]._id %>" class="btn btn-primary btn-sm">
                 <i class="fas fa-pencil-alt"></i> Edit</a>
               </td>
               <td class="text-center col-1">
-                  <a href="/surveylist2/delete/<%= Survey_List[count]._id %>" class="btn btn-danger btn-sm">
+                  <a href="/surveylist2/delete/<%= Survey_List2[count]._id %>" class="btn btn-danger btn-sm">
                   <i class="fas fa-trash-alt"></i> Delete</a>
               </td>
             <%}%>

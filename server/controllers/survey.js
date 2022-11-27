@@ -7,7 +7,7 @@ const survey2 = require("../models/survey2");
 const survey3 = require("../models/survey3");
 
 
-// router for 
+// for template 1
 module.exports.displaysurveyList = (req, res, next) => {
     survey.find((err, survey_List) => {
       if (err) {
@@ -44,6 +44,8 @@ module.exports.displaysurveyList = (req, res, next) => {
     });
   };
   
+  // for template3
+
   module.exports.displaysurvey2List = (req, res, next) => {
     survey2.find((err, survey_List2) => {
       if (err) {
@@ -61,7 +63,7 @@ module.exports.displaysurveyList = (req, res, next) => {
     });
   };
   
-  // for template3
+  // for template4
   module.exports.displaysurvey3List = (req, res, next) => {
     survey3.find((err, survey_List3) => {
       if (err) {
@@ -79,6 +81,7 @@ module.exports.displaysurveyList = (req, res, next) => {
     });
   };
   
+  // for template 1
 module.exports.template1page = (req, res, next) =>{
   res.render("surveys/template1", {
     title:"Nespresso - Customer Satisfaction Survey",
@@ -184,7 +187,7 @@ module.exports.template4processpage = (req, res, next) =>{
     answer6: req.body.question5,
   });
 
-  survey3.create(newsurvey3, (err, surveys3)=>{
+  survey3.create(newsurvey3, (err, survey3)=>{
     if (err){
       console.log(err);
       res.end(err);
@@ -222,6 +225,7 @@ module.exports.template4processpage = (req, res, next) =>{
   //   });
   // };
   
+  // for template 1
   module.exports.displayeditpage = (req, res, next) => {
     let id = req.params.id; //id of actual object
   
@@ -438,7 +442,7 @@ module.exports.template4processpage = (req, res, next) =>{
   
   module.exports.deletepage3 = (req, res, next) => {
     let id = req.params.id;
-    Survey_List3.remove({ _id: id }, (err) => {
+    survey3.remove({ _id: id }, (err) => {
       if (err) {
         console.log(err);
         res.end(err);
