@@ -50,28 +50,23 @@ body{
     border-radius: 10px;
 }
 
-
-
+.temp1, .temp2, .temp3, .temp4{
+    border-radius: 50%;
+    width: 380px;
+}
 
 .from-group{
     padding-top: 10px;
 }
 
-
-
-th{
+td{
+    padding: 30px;
     text-align: center;
 }
 
 .templates{
     margin-left: auto;
     margin-right: auto;
-}
-
-
-
-img{
-    border-radius: 50%;
 }
 
 .Q1{
