@@ -71,7 +71,7 @@ module.exports.displaysurveyList = (req, res, next) => {
       } else {
         //console.log(survey_List);
   
-        res.render("surveys/list", {
+        res.render("surveys/list3", {
           title: "Survey List",
           Survey_List3: survey_List3,
           displayName: req.user ? req.user.displayName : "",
