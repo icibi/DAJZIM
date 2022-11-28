@@ -179,12 +179,12 @@ module.exports.template4page = (req, res, next) =>{
 module.exports.template4processpage = (req, res, next) =>{
   let newsurvey3 = survey3({
     surveyType: req.body.surveyType,
-    answer1: req.body.question0,
-    answer2: req.body.question1,
-    answer3: req.body.question2,
-    answer4: req.body.question3,
-    answer5: req.body.question4,
-    answer6: req.body.question5,
+    answer1: req.body.question1,
+    answer2: req.body.question2,
+    answer3: req.body.question3,
+    answer4: req.body.question4,
+    answer5: req.body.question5,
+    answer6: req.body.question6,
   });
 
   survey3.create(newsurvey3, (err, survey3)=>{
