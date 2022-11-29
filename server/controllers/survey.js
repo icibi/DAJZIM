@@ -171,7 +171,7 @@ module.exports.template3processpage = (req, res, next) =>{
 // for template4
 module.exports.template4page = (req, res, next) =>{
   res.render("surveys/template4", {
-    title:"dddd - Customer Satisfaction Survey",
+    title:"Xbox Canada Survey",
     displayName: req.user ? req.user.displayName : "",
   });
 };
