@@ -250,12 +250,12 @@ module.exports.template4processpage = (req, res, next) =>{
     let updatesurvey = survey({
       _id: id,
       surveyType: req.body.surveyType,
-      answer1: req.body.question1,
-      answer2: req.body.question2,
-      answer3: req.body.question3,
-      answer4: req.body.question4,
-      answer5: req.body.question5,
-      answer6: req.body.question6,
+      answer1: req.body.question0,
+      answer2: req.body.question1,
+      answer3: req.body.question2,
+      answer4: req.body.question3,
+      answer5: req.body.question4,
+      answer6: req.body.question5,
       
     });
     survey.updateOne({ _id: id }, updatesurvey, (err) => {
