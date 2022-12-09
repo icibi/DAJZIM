@@ -10,6 +10,26 @@ body{
     font-weight: bold;
 }
 
+#viewtemplates:link {
+    text-decoration: none;
+    color:white;
+}
+
+#viewtemplates:visited {
+    text-decoration: none;
+    color:white;
+}
+
+#viewtemplates:hover {
+    text-decoration: none;
+    color:white;
+}
+
+#viewtemplates:active {
+    text-decoration: none;
+    color:white;
+}
+
 #pricing_heading {
     position: relative;
     top: -50px;
