@@ -82,10 +82,10 @@ router.get("/template2", surveyController.template2page);
 router.post("/template2",  surveyController.template2processpage);
 
 /* GET Route for displaying the Edit page for template2- UPDATE Operation */
-router.get("/surveylist1/edit/:id", requireAuthS2, surveyController.displayeditpage1);
+router.get("/surveylist1/edit1/:id", requireAuthS2, surveyController.displayeditpage1);
 
 /* POST Route for processing the Edit page for template2- UPDATE Operation */
-router.post("/surveylist1/edit/:id", requireAuthS2, surveyController.processingeditpage1);
+router.post("/surveylist1/edit1/:id", requireAuthS2, surveyController.processingeditpage1);
 
 /* GET to perform  Deletion for template2 - DELETE Operation */
 router.get("/surveylist1/delete/:id", requireAuthS2, surveyController.deletepage1);
