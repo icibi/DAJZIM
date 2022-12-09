@@ -71,7 +71,7 @@ module.exports.displaysurveyList = (req, res, next) => {
       } else {
         //console.log(survey_List);
   
-        res.render("surveys/list", {
+        res.render("surveys/list3", {
           title: "Survey List",
           Survey_List3: survey_List3,
           displayName: req.user ? req.user.displayName : "",
@@ -113,7 +113,7 @@ module.exports.template1processpage = (req, res, next) =>{
 // for template2
 module.exports.template2page = (req, res, next) =>{
   res.render("surveys/template2", {
-    title:"ddd",
+    title:"Customer Satisfaction Survey - Ardene",
     displayName: req.user ? req.user.displayName : "",
   });
 };
@@ -171,7 +171,7 @@ module.exports.template3processpage = (req, res, next) =>{
 // for template4
 module.exports.template4page = (req, res, next) =>{
   res.render("surveys/template4", {
-    title:"dddd - Customer Satisfaction Survey",
+    title:"Xbox Canada Survey",
     displayName: req.user ? req.user.displayName : "",
   });
 };
@@ -179,12 +179,12 @@ module.exports.template4page = (req, res, next) =>{
 module.exports.template4processpage = (req, res, next) =>{
   let newsurvey3 = survey3({
     surveyType: req.body.surveyType,
-    answer1: req.body.question0,
-    answer2: req.body.question1,
-    answer3: req.body.question2,
-    answer4: req.body.question3,
-    answer5: req.body.question4,
-    answer6: req.body.question5,
+    answer1: req.body.question1,
+    answer2: req.body.question2,
+    answer3: req.body.question3,
+    answer4: req.body.question4,
+    answer5: req.body.question5,
+    answer6: req.body.question6,
   });
 
   survey3.create(newsurvey3, (err, survey3)=>{
@@ -250,12 +250,12 @@ module.exports.template4processpage = (req, res, next) =>{
     let updatesurvey = survey({
       _id: id,
       surveyType: req.body.surveyType,
-      answer1: req.body.question1,
-      answer2: req.body.question2,
-      answer3: req.body.question3,
-      answer4: req.body.question4,
-      answer5: req.body.question5,
-      answer6: req.body.question6,
+      answer1: req.body.question0,
+      answer2: req.body.question1,
+      answer3: req.body.question2,
+      answer4: req.body.question3,
+      answer5: req.body.question4,
+      answer6: req.body.question5,
       
     });
     survey.updateOne({ _id: id }, updatesurvey, (err) => {

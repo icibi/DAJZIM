@@ -28,19 +28,6 @@ module.exports.displaypricingpage = (req, res, next) => {
   });
 };
 
-// module.exports.displaysurveyListpage = (req, res, next) => {
-//   res.render("index", {
-//     title: "SurveyList",
-//     displayName: req.user ? req.user.displayName : "",
-//   });
-// };
-
-// module.exports.displaycontactpage = (req, res, next) => {
-//   res.render("index", {
-//     title: "Contact Me",
-//     displayName: req.user ? req.user.displayName : "",
-//   });
-// };
 
 module.exports.displayLoginPage = (req, res, next) => {
   // check if the user is already logged in
@@ -54,6 +41,28 @@ module.exports.displayLoginPage = (req, res, next) => {
     return res.redirect("/");
   }
 };
+
+module.exports.processLoginPage = (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    // server err?
+    if (err) {
+      return next(err);
+    }
+    // is there a user login error?
+    if (!user) {
+      req.flash("loginMessage", "Authentication Error");
+      return res.redirect("/login");
+    }
+    req.login(user, (err) => {
+      // server error?
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/");
+    });
+  })(req, res, next);
+};
+
 
 // link to surveylist page 
 module.exports.processLoginPageToSurveyList = (req, res, next) => {

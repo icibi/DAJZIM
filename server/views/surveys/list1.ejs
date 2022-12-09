@@ -20,12 +20,12 @@
           <!--HEader row-->
           <tr>
             <th class="text-center">Survey Type</th>
-            <th class="text-center">Q1-Answer</th>
-            <th class="text-center">Q2-Answer</th>
-            <th class="text-center">Q3-Answer</th>
-            <th class="text-center">Q4-Answer</th>
-            <th class="text-center">Q5-Answer</th>
-            <th class="text-center">Q6-Answer</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Experince</th>
+            <th class="text-center">Ease of Shopping</th>
+            <th class="text-center">Next Purchase</th>
+            <th class="text-center">Value for Money</th>
+            <th class="text-center">Satisfaction</th>
             
             <% if(typeof displayName == 'string' && displayName) { %>
   
@@ -47,7 +47,7 @@
 
               <% if(typeof displayName == 'string' && displayName) { %>
               <td class="text-center col-1">
-                <a href="/surveylist1/edit/<%= Survey_List1[count]._id %>" class="btn btn-primary btn-sm">
+                <a href="/surveylist1/edit1/<%= Survey_List1[count]._id %>" class="btn btn-primary btn-sm">
                 <i class="fas fa-pencil-alt"></i> Edit</a>
               </td>
               <td class="text-center col-1">

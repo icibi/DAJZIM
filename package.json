@@ -36,5 +36,17 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^7.1.2",
     "popper.js": "^1.16.1"
-  }
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icibi/DAJZIM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icibi/DAJZIM/issues"
+  },
+  "homepage": "https://github.com/icibi/DAJZIM#readme",
+  "description": ""
 }

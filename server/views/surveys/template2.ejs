@@ -9,83 +9,100 @@
 
       <form class="form" method="post">
 
-        <label for="type">Survey Type</label>
+        <p class="instruction">Thank you for shopping with us. <br> Please respond to the survey below to help us improve our customer service.</p>
         <div class="from-group">
-          <input class="form-check-input" type="hidden" name="surveyType" id="surveyType" value="population" checked >
+          <input class="form-check-input" type="hidden" name="surveyType" id="surveyType" value="Customer Satisfaction" checked >
           <!-- <label class="form-check-label" for="surveyType">Marketing</label> -->
         </div>
 
 
         <div class="from-group">
-            <label for="question1">Q1: What is your gender?</label><br>
+          <label for="question0">Q1: What is your name?</label><br>
+          <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0"  />
+
+      </div>
+
+        <div class="from-group">
+            <label for="question1">Q2: How would you rate your shopping experince today?</label><br>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Male" />
-                <label class="form-check-label" for="inputGenderM">Male</label>
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Poor" />
+                <label class="form-check-label" for="inputGenderM">Poor</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="Female" />
-                <label class="form-check-label" for="inputGenderNot">Female</label>
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="Good" />
+                <label class="form-check-label" for="inputGenderNot">Good</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="inputGenderNot" name="question1" value="Prefer not to answer"  />
-                <label class="form-check-label" for="inputGenderNot">Prefer not to answer</label>
+                <input type="checkbox" class="form-check-input" id="inputGenderNot" name="question1" value="Excellent"  />
+                <label class="form-check-label" for="inputGenderNot">Excellent</label>
+            </div>
+        </div>
+
+         <div class="from-group">
+          <label for="question2">Q3: How easy was it to find what you were looking for?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency1" value="Very Easy" >
+                <label class="form-check-label" for="frequency1">Very Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency2" value="Easy">
+                <label class="form-check-label" for="frequency2">Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency4" value="Moderate">
+                <label class="form-check-label" for="frequency4">Moderate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency5" value="Difficult">
+                <label class="form-check-label" for="frequency5">Difficult </label>
             </div>
         </div>
 
         <div class="from-group">
-          <label for="question2">Q2: What is your age?</label><br>
-          <input type="text" class="form-control" id="question2" placeholder="Enter your age" name="question2"  />
-        </div>
-
-        <div class="from-group">
-          <label for="question3">Q3: How often do you use?</label><br>
+          <label for="question3">Q4: How likely are you to purchase again from us?</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Everyday" >
-                <label class="form-check-label" for="frequency1">Everyday</label>
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Highly likely" >
+                <label class="form-check-label" for="frequency1">Highly likely</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="2 or 3 times a week">
-                <label class="form-check-label" for="frequency2">2 or 3 times a week</label>
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="Likely">
+                <label class="form-check-label" for="frequency2">Likely</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="frequency3" value="2 or 3 times a month">
-                <label class="form-check-label" for="frequency3">2 or 3 times a month</label>
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Maybe">
+                <label class="form-check-label" for="frequency4">Maybe</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Once a month">
-                <label class="form-check-label" for="frequency4">Once a month</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Less than once a month">
-                <label class="form-check-label" for="frequency5">Less than once a month</label>
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Never">
+                <label class="form-check-label" for="frequency5">Never</label>
             </div>
         </div>
 
         <div class="from-group">
-            <label for="question4">Q4: For how long have you been using our service/product?</label><br>
+            <label for="question4">Q5: How would you rate the value for money of your purchase?</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Less than a month">
-                <label class="form-check-label" for="periodOfUsing1">Less than a month</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor">
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="1-12 months">
-                <label class="form-check-label" for="periodOfUsing2">1-12 months</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average">
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="1-3 years">
-                <label class="form-check-label" for="periodOfUsing3">1-3 years</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good">
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Over 3 years">
-                <label class="form-check-label" for="periodOfUsing4">Over 3 years</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good">
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Haven't used it yet">
-                <label class="form-check-label" for="periodOfUsing5">Haven't used it yet</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent">
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
             </div>
           </div>
           <div class="from-group">
-            <label for="question5">Q5: How satisfied are you with the service/product?</label><br>
+            <label for="question5">Q6: How satisfied are you with our quality of service?</label><br>
             <select name="question5" class="form-control" id="ageRange">
                 <option selected>Choose...</option>
                 <option value="Very satisfied">Very satisfied</option>
@@ -95,11 +112,12 @@
                 <option value="Very Unsatisfied">Very Unsatisfied</option>
             </select>
           </div>
-        <button class="btn btn-primary" type="submit">
+          <br>
+        <button class="btn btn-outline-light" type="submit">
           <i class="fas fa-edit"></i>Submit
         </button>
 
-        <a href="/templates" class="btn btn-warning">
+        <a href="/templates" class="btn btn-outline-warning">
           <i class="fas fa-undo"></i>Cancel
         </a>
       </form>

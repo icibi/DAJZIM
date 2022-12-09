@@ -1,0 +1,427 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/nav.ejs %>
+
+<!--Content for the Edit page-->
+
+<div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <h1 id="survey1Edit_title"><%=title %></h1>
+  
+        <form class="form" method="post">
+
+            
+            <div class="from-group">
+              <input class="form-check-input" type="hidden" name="survey1Type" id="survey1Type" value="Marketing" checked >
+              <!-- <label class="form-check-label" for="survey1Type">Marketing</label> -->
+            </div>
+    
+    
+            <div class="from-group">
+              <label for="question0">Q1: What is your name?</label><br>
+            <% if (survey1.answer1 != " ")
+            {%>
+              <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0" value="<%= survey1.answer1 %>" />
+            <%}%>
+           </div>
+    
+          <div class="from-group">
+            <label for="question1">Q2: How would you rate your shopping experince today?</label><br>
+             <% if (survey1.answer2 == "Poor") 
+            {%>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Poor" checked/>
+                <label class="form-check-label" for="inputGenderM">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="Good" />
+                <label class="form-check-label" for="inputGenderNot">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderNot" name="question1" value="Excellent"  />
+                <label class="form-check-label" for="inputGenderNot">Excellent</label>
+            </div>
+            <%}
+            else if(survey1.answer2 == "Good") 
+          {%>
+           <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Poor"/>
+                <label class="form-check-label" for="inputGenderM">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="Good" checked/>
+                <label class="form-check-label" for="inputGenderNot">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderNot" name="question1" value="Excellent"  />
+                <label class="form-check-label" for="inputGenderNot">Excellent</label>
+            </div>
+             <%}
+          else {%>
+           <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Poor" />
+                <label class="form-check-label" for="inputGenderM">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="Good" />
+                <label class="form-check-label" for="inputGenderNot">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderNot" name="question1" value="Excellent" checked/>
+                <label class="form-check-label" for="inputGenderNot">Excellent</label>
+            </div>
+          <%}%>
+          </div>
+      
+
+        <div class="from-group">
+           <label for="question2">Q3: How easy was it to find what you were looking for?</label><br>
+            <% if(survey1.answer3 == "Very Easy")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency1" value="Very Easy" checked>
+                <label class="form-check-label" for="frequency1">Very Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency2" value="Easy">
+                <label class="form-check-label" for="frequency2">Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency4" value="Moderate">
+                <label class="form-check-label" for="frequency4">Moderate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency5" value="Difficult">
+                <label class="form-check-label" for="frequency5">Difficult </label>
+            </div>
+         <%}
+          else if (survey1.answer3 == "Easy")
+          {%>
+          <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency1" value="Very Easy" >
+                <label class="form-check-label" for="frequency1">Very Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency2" value="Easy" checked>
+                <label class="form-check-label" for="frequency2">Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency4" value="Moderate">
+                <label class="form-check-label" for="frequency4">Moderate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency5" value="Difficult">
+                <label class="form-check-label" for="frequency5">Difficult </label>
+            </div>
+            <%}
+          else if (survey1.answer3 == "Moderate")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency1" value="Very Easy" >
+                <label class="form-check-label" for="frequency1">Very Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency2" value="Very Easy">
+                <label class="form-check-label" for="frequency2">Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency4" value="Moderate" checked>
+                <label class="form-check-label" for="frequency4">Moderate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency5" value="Difficult">
+                <label class="form-check-label" for="frequency5">Difficult </label>
+            </div>
+            <%}
+          else
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency1" value="Very Easy" >
+                <label class="form-check-label" for="frequency1">Very Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency2" value="Very Easy">
+                <label class="form-check-label" for="frequency2">Easy</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency4" value="Moderate">
+                <label class="form-check-label" for="frequency4">Moderate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question2" id="frequency5" value="Difficult" checked>
+                <label class="form-check-label" for="frequency5">Difficult </label>
+            </div>
+          <%}%>
+        </div>
+
+        <div class="from-group">
+         <label for="question3">Q4: How likely are you to purchase again from us?</label><br>
+            <% if (survey1.answer4 == "Highly likely")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Highly likely" checked>
+                <label class="form-check-label" for="frequency1">Highly likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="Likely">
+                <label class="form-check-label" for="frequency2">Likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Maybe">
+                <label class="form-check-label" for="frequency4">Maybe</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Never">
+                <label class="form-check-label" for="frequency5">Never</label>
+            </div>
+             <%} else if (survey1.answer4 == "Likely")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Highly likely" >
+                <label class="form-check-label" for="frequency1">Highly likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="Likely" checked>
+                <label class="form-check-label" for="frequency2">Likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Maybe">
+                <label class="form-check-label" for="frequency4">Maybe</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Never">
+                <label class="form-check-label" for="frequency5">Never</label>
+            </div>
+            <%}
+          else if (survey1.answer4 == "Maybe")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Highly likely" >
+                <label class="form-check-label" for="frequency1">Highly likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="Likely">
+                <label class="form-check-label" for="frequency2">Likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Maybe" checked>
+                <label class="form-check-label" for="frequency4">Maybe</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Never">
+                <label class="form-check-label" for="frequency5">Never</label>
+            </div>
+            <%} 
+            else 
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="Highly likely" >
+                <label class="form-check-label" for="frequency1">Highly likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="Likely">
+                <label class="form-check-label" for="frequency2">Likely</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Maybe">
+                <label class="form-check-label" for="frequency4">Maybe</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="Never" checked>
+                <label class="form-check-label" for="frequency5">Never</label>
+            </div>
+          <%}%>
+        </div>
+
+        <div class="from-group">
+            <label for="question4">Q5: How would you rate the value for money of your purchase?</label><br>
+             <% if (survey1.answer5 == "Poor")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor" checked>
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average">
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good">
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good">
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent">
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
+            </div>
+             <%}
+          else if (survey1.answer5 == "Average")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor">
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average" checked>
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good">
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good">
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent">
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
+            </div>
+             <%}
+          else if (survey1.answer5 == "Good")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor">
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average">
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good" checked>
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good">
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent">
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
+            </div>
+             <%}
+          else if (survey1.answer5 == "Very Good")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor">
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average">
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good">
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good" checked>
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent">
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
+            </div>
+            <%} else {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Poor">
+                <label class="form-check-label" for="periodOfUsing1">Poor</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Average">
+                <label class="form-check-label" for="periodOfUsing2">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Good">
+                <label class="form-check-label" for="periodOfUsing3">Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="Very Good">
+                <label class="form-check-label" for="periodOfUsing4">Very Good</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing5" value="Excellent" checked>
+                <label class="form-check-label" for="periodOfUsing5">Excellent</label>
+            </div>
+          <%}%>
+          </div>
+
+
+          <div class="from-group">
+            <label for="question5">Q6: How satisfied are you with our quality of service?</label><br>
+            <% if (survey1.answer6 == "Very satisfied")
+            {%>
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+            <%} else if (survey1.answer6 == "Satisfied") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied" selected>Very satisfied</option>
+                <option value="Satisfied" selected>Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+            <%} else if (survey1.answer6 == "Neutral") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral" selected>Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+            <%} else if (survey1.answer6 == "Unsatisfied") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied" selected>Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+              <%} else {%>
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied" selected>Very Unsatisfied</option>
+            </select> 
+            <%}%>
+          </div>
+          <br>
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i>Submit
+          </button>
+  
+          <a href="/surveylist1" class="btn btn-warning">
+            <i class="fas fa-undo"></i>Cancel
+          </a>
+  
+          </div>
+
+         
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--HTML Footer part-->
+<%- include ../partials/footer.ejs %> 
