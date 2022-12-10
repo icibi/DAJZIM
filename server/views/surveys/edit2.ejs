@@ -1,114 +1,296 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/nav.ejs %>
 
+<div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <h1 id="survey1Edit_title"><%=title %></h1>
+  
+        <form class="form" method="post">
 
- <div class="row">
-    <div class="offset-md-3 col-md-6">
-      <h1 id="business_title"><%=title %></h1>
-
-      <form class="form" method="post">
-
-        
-
-        <label for="type">Survey Type</label>
+            
             <div class="from-group">
-              <input class="form-check-input" type="hidden" name="surveyType" id="surveyType" value="Student" checked >
-              </div>
-
-
-        <div class="from-group">
-          <label for="question0">Q1: What is your name?</label><br>
-          <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0"  />
-
-      </div>
-
-        <div class="from-group">
-           <div class="Q1"> <label for="question1">Are you current student?</label><br></div>
+              <input class="form-check-input" type="hidden" name="survey1Type" id="survey1Type" value="Student" checked >
+              
+            </div>
+    
+    
+            <div class="from-group">
+              <label for="question0">Q1: What is your name?</label><br>
+            <% if (survey2.answer1 != " ")
+            {%>
+              <input type="text" class="form-control" id="question0" placeholder="Enter your name" name="question0" value="<%= survey2.answer1 %>" />
+            <%}%>
+           </div>
+    
+          <div class="from-group">
+            <label for="question1">Are you current student?</label><br>
+             <% if (survey2.answer2 == "Yes") 
+            {%>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="currentstatus" name="question1" value="Yes" />
-                <label class="form-check-label" for="currentstatus">Yes</label>
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Yes" checked/>
+                <label class="form-check-label" for="inputGenderM">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="currentstatus" name="question1" value="No" />
-                <label class="form-check-label" for="currentstatus">No</label>
-            </div>
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="No" />
+                <label class="form-check-label" for="inputGenderNot">No</label>
             </div>
 
-        <div class="from-group">
-          <div class="Q2"><label for="question2">Enter your field of Interest</label><br></div>
-          
-          <input type="text" class="form-control" id="question2" placeholder="Interest" name="question2"  />
+            <%}
+            else if(survey2.answer2 == "No") 
+          {%>
+           <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderM" name="question1" value="Yes"/>
+                <label class="form-check-label" for="inputGenderM">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="inputGenderF" name="question1" value="No" checked/>
+                <label class="form-check-label" for="inputGenderNot">No</label>
+            </div>
+         
+             <%}%>
+
+</div>    
+     
+<div class="from-group">
+              <label for="question2">Enter your field of Interest</label><br>
+            <% if (survey2.answer3 != " ")
+            {%>
+              <input type="text" class="form-control" id="question2" placeholder="Enter your name" name="question2" value="<%= survey2.answer3 %>" />
+            <%}%>
+           </div>
+
+<div class="from-group">
+         <label for="question3">What previous education do you have?</label><br>
+            <% if (survey2.answer4 == "High School")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="High School" checked>
+                <label class="form-check-label" for="frequency1">High School</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="College Diploma">
+                <label class="form-check-label" for="frequency2">College Diploma</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Degree">
+                <label class="form-check-label" for="frequency4">Degree</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="None">
+                <label class="form-check-label" for="frequency5">None</label>
+            </div>
+             <%} else if (survey2.answer4 == "College Diploma")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="High School" >
+                <label class="form-check-label" for="frequency1">High School</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="College Diploma" checked>
+                <label class="form-check-label" for="frequency2">College Diploma</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Degree">
+                <label class="form-check-label" for="frequency4">Degree</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="None">
+                <label class="form-check-label" for="frequency5">None</label>
+            </div>
+            <%}
+          else if (survey2.answer4 == "Degree")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="High School" >
+                <label class="form-check-label" for="frequency1">High School</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="College Diploma">
+                <label class="form-check-label" for="frequency2">Colleg Diploma</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Degree" checked>
+                <label class="form-check-label" for="frequency4">Degree</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="None">
+                <label class="form-check-label" for="frequency5">None</label>
+            </div>
+            <%} 
+            else 
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency1" value="High School" >
+                <label class="form-check-label" for="frequency1">High School</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency2" value="College Diploma">
+                <label class="form-check-label" for="frequency2">College Diploma</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency4" value="Degree">
+                <label class="form-check-label" for="frequency4">Degree</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="frequency5" value="None" checked>
+                <label class="form-check-label" for="frequency5">None</label>
+            </div>
+          <%}%>
         </div>
 
-        <div class="from-group">
-         <div class="Q3"> <label for="question3">What previous education do you have?</label><br></div>
-          <br>
+<div class="from-group">
+            <label for="question4">Which is your favorite sport?</label><br>
+             <% if (survey2.answer5 == "Cricket")
+          {%>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="h1" value="High School" >
-                <label class="form-check-label" for="h1">High School</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Cricket" checked>
+                <label class="form-check-label" for="periodOfUsing1">Cricket</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="h2" value="College diploma">
-                <label class="form-check-label" for="h2">College diploma</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Football">
+                <label class="form-check-label" for="periodOfUsing2">Football</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="h3" value="Degree">
-                <label class="form-check-label" for="h3">Degree</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Badminton">
+                <label class="form-check-label" for="periodOfUsing3">Badminton</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="h4" value="None">
-                <label class="form-check-label" for="frequency4">None</label>
-            </div>
-        </div>
-<br>
-        <div class="from-group">
-            <div class="Q4"><label for="question4">Which is your favorite sport?</label><br></div>
-            <br>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
-                <label class="form-check-label" for="g1">Cricket</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="g2" value="Football">
-                <label class="form-check-label" for="g2">Football</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton">
-                <label class="form-check-label" for="g3">badminton</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="question4" id="g4" value="None">
-                <label class="form-check-label" for="g4">None</label>
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="None">
+                <label class="form-check-label" for="periodOfUsing4">None</label>
             </div>
           
+             <%}
+          else if (survey2.answer5 == "Football")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Cricket">
+                <label class="form-check-label" for="periodOfUsing1">Cricket</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Football" checked>
+                <label class="form-check-label" for="periodOfUsing2">Football</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Badminton">
+                <label class="form-check-label" for="periodOfUsing3">Badminton</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="None">
+                <label class="form-check-label" for="periodOfUsing4">None</label>
+            </div>
+           
+             <%}
+          else if (survey2.answer5 == "Badminton")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Cricket">
+                <label class="form-check-label" for="periodOfUsing1">Cricket</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Football">
+                <label class="form-check-label" for="periodOfUsing2">Football</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Badminton" checked>
+                <label class="form-check-label" for="periodOfUsing3">Badminton</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="None">
+                <label class="form-check-label" for="periodOfUsing4">None</label>
+            </div>
+             <%}
+          else if (survey2.answer5 == "None")
+          {%>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing1" value="Cricket">
+                <label class="form-check-label" for="periodOfUsing1">Cricket</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing2" value="Football">
+                <label class="form-check-label" for="periodOfUsing2">Football</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing3" value="Badminton">
+                <label class="form-check-label" for="periodOfUsing3">Badminnton</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question4" id="periodOfUsing4" value="None" checked>
+                <label class="form-check-label" for="periodOfUsing4">None</label>
+            </div>
+          
+          <%}%>
           </div>
 
-          <br>
-          <div class="from-group">
-           <div class="Q5"> <label for="question5">How satisfied you are with the studies that you did so far?</label><br></div>
-            <br>
+      <div class="from-group">
+            <label for="question5">How satisfied you are with the studies that you did so far?</label><br>
+            <% if (survey2.answer6 == "Very satisfied")
+            {%>
             <select name="question5" class="form-control" id="ageRange">
-                <option selected>Select</option>
+                <option>Choose...</option>
                 <option value="Very satisfied">Very satisfied</option>
                 <option value="Satisfied">Satisfied</option>
                 <option value="Neutral">Neutral</option>
                 <option value="Unsatisfied">Unsatisfied</option>
                 <option value="Very Unsatisfied">Very Unsatisfied</option>
-            </select>
+            </select> 
+            <%} else if (survey2.answer6 == "Satisfied") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied" selected>Very satisfied</option>
+                <option value="Satisfied" selected>Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+            <%} else if (survey2.answer6 == "Neutral") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral" selected>Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+            <%} else if (survey2.answer6 == "Unsatisfied") 
+            {%> 
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied" selected>Unsatisfied</option>
+                <option value="Very Unsatisfied">Very Unsatisfied</option>
+            </select> 
+              <%} else {%>
+            <select name="question5" class="form-control" id="ageRange">
+                <option>Choose...</option>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Unsatisfied">Unsatisfied</option>
+                <option value="Very Unsatisfied" selected>Very Unsatisfied</option>
+            </select> 
+            <%}%>
           </div>
           <br>
-        <button class="btn btn-primary" type="submit">
-          <i class="fas fa-edit"></i>Submit
-        </button>
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i>Submit
+          </button>
+  
+          <a href="/surveylist1" class="btn btn-warning">
+            <i class="fas fa-undo"></i>Cancel
+          </a>
+  
+          </div>
 
-        <a href="/templates" class="btn btn-warning">
-          <i class="fas fa-undo"></i>Cancel
-        </a>
-      </form>
+         
+        </form>
+      </div>
     </div>
   </div>
-
-
 
 
 
