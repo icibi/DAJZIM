@@ -10,26 +10,6 @@ body{
     font-weight: bold;
 }
 
-#viewtemplates:link {
-    text-decoration: none;
-    color:white;
-}
-
-#viewtemplates:visited {
-    text-decoration: none;
-    color:white;
-}
-
-#viewtemplates:hover {
-    text-decoration: none;
-    color:white;
-}
-
-#viewtemplates:active {
-    text-decoration: none;
-    color:white;
-}
-
 #pricing_heading {
     position: relative;
     top: -50px;
@@ -76,6 +56,11 @@ body{
     border-radius: 50%;
     width: 380px;
 }
+.gif{
+    border-radius: 15%;
+    width: 480px;
+    opacity: 0.6;
+}
 
 .from-group{
     padding-top: 10px;
@@ -91,23 +76,68 @@ td{
     margin-right: auto;
 }
 
-.Q1{
- 
-    font-weight: bold;
-}
-.Q2{
-    font-weight: bold;
+.pricing{
+    background-color: lightblue;
+    
 }
 
-.Q3{
-    font-weight: bold;
+body{
+    background-color: white;
+    
+        margin:0px;
+        font-family:'Roboto';
+
+        background-image: url("/assets/images/gifgit.gif");
+      
 }
 
-.Q4{
-    font-weight: bold;
+
+
+
+#container {
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:100px;  
+  position:fixed;
+  width:100%;
+  bottom:65%;
+  display:block;
+  padding-left: 520px;
 }
 
-.Q5{
-    font-weight: bold;
+#flip {
+  height:50px;
+  overflow:hidden;
 }
 
+#flip > div > div {
+  color:lightgray;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 4s linear infinite;
+}
+
+
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+
+.giff{
+    border-radius: 50%;
+    opacity: 0.2;
+}
