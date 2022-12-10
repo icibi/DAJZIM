@@ -18,19 +18,40 @@
 
         <div class="from-group">
             <div class="Q1"><label for="question1">1. What is your Name?</label><br></div>
-            
+            <% if (survey.answer1 != " ")
+            {%>
             <input type="text" class="form-control" id="question2" placeholder="Name" name="question1"  />
+            <%}%>
           </div>
 <br>
         
           <div class="from-group">
             <div class="Q2"> <label for="question2">2. What is your Gender?</label><br></div>
+            <% if (survey.answer2 == "Male") 
+            {%>
              <select name="question2" class="form-control" id="ageRange">
                  <option selected>Select</option>
-                 <option value="Male">Male</option>
+                 <option value="Male" selected>Male</option>
                  <option value="Female">Female</option>
                  <option value="Other">Other</option>
              </select>
+             <%} else if (survey.answer2 == "Female") 
+            {%> 
+              <select name="question2" class="form-control" id="ageRange">
+                 <option selected>Select</option>
+                 <option value="Male">Male</option>
+                 <option value="Female" selected>Female</option>
+                 <option value="Other">Other</option>
+             </select>
+             <%} else
+            {%> 
+              <select name="question2" class="form-control" id="ageRange">
+                 <option selected>Select</option>
+                 <option value="Male">Male</option>
+                 <option value="Female">Female</option>
+                 <option value="Other" selected>Other</option>
+             </select>
+             <%}%>
            </div>
           <div class="from-group">
 
@@ -38,8 +59,10 @@
 
             <div class="from-group">
                 <div class="Q3"> <label for="question3">3. What is your age gap?</label><br></div>
+                <% if (survey.answer3 == "3-10 years") 
+            {%>
                    <div class="form-check form-check-inline">
-                       <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years" >
+                       <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years" checked >
                        <label class="form-check-label" for="h1">a) 3-10 years</label>
                    </div>
                    <div class="form-check form-check-inline">
@@ -54,14 +77,71 @@
                        <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older">
                        <label class="form-check-label" for="frequency4">d) 31- older</label>
                    </div>
+                   <%} else if (survey.answer3 == "11-20 years") 
+            {%> 
+              <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years">
+                       <label class="form-check-label" for="h1">a) 3-10 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h2" value="11-20 years" checked>
+                       <label class="form-check-label" for="h2">b) 11-20 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h3" value="21-30 years">
+                       <label class="form-check-label" for="h3">c) 21-30 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older">
+                       <label class="form-check-label" for="frequency4">d) 31- older</label>
+                   </div>
+                   <%} else if (survey.answer3 == "21-30 years") 
+            {%> 
+              <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years">
+                       <label class="form-check-label" for="h1">a) 3-10 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h2" value="11-20 years">
+                       <label class="form-check-label" for="h2">b) 11-20 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h3" value="21-30 years" checked>
+                       <label class="form-check-label" for="h3">c) 21-30 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older">
+                       <label class="form-check-label" for="frequency4">d) 31- older</label>
+                   </div>
+                   <%} else 
+            {%> 
+              <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years">
+                       <label class="form-check-label" for="h1">a) 3-10 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h2" value="11-20 years">
+                       <label class="form-check-label" for="h2">b) 11-20 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h3" value="21-30 years">
+                       <label class="form-check-label" for="h3">c) 21-30 years</label>
+                   </div>
+                   <div class="form-check form-check-inline">
+                       <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older" checked>
+                       <label class="form-check-label" for="frequency4">d) 31- older</label>
+                   </div>
                </div>
+               <%}%>
             </div>
 <br>
 
             <div class="from-group">
                 <div class="Q4"><label for="question4">4) How long you have been using xbox?</label><br></div>
+                <% if (survey.answer4 == "Cricket") 
+            {%>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket" checked>
                     <label class="form-check-label" for="g1">a) 1 year or less</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -72,27 +152,100 @@
                     <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton">
                     <label class="form-check-label" for="g3">c) more than 3 years</label>
                 </div>
-              
+                <%} else if (survey.answer4 == "Football") 
+            {%> 
+              <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
+                    <label class="form-check-label" for="g1">a) 1 year or less</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g2" value="Football" checked>
+                    <label class="form-check-label" for="g2">b) 1-2 year</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton">
+                    <label class="form-check-label" for="g3">c) more than 3 years</label>
+                </div>
+                <%} else  
+            {%> 
+              <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
+                    <label class="form-check-label" for="g1">a) 1 year or less</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g2" value="Football">
+                    <label class="form-check-label" for="g2">b) 1-2 year</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton" checked>
+                    <label class="form-check-label" for="g3">c) more than 3 years</label>
+                </div>
+              <%}%>
               </div>
 <br>
 
               <div class="from-group">
                 <div class="Q5"> <label for="question5">5) How satisfied you are with the product?</label><br></div>
+                <% if (survey.answer5 == "Highly Satisfied") 
+            {%>
                  <select name="question5" class="form-control" id="ageRange">
                      <option selected>Select</option>
-                     <option value="Highly Satisfied">Highly Satisfied</option>
+                     <option value="Highly Satisfied" selected>Highly Satisfied</option>
                      <option value="Satisfied">Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
                      <option value="dissatisfied">dissatisfied</option>
                      <option value="Highly Dissatisfied">Highly Dissatisfied</option>
                  </select>
-               </div>
+                 <%} else if (survey.answer5 == "Satisfied") 
+            {%> 
+              <select name="question5" class="form-control" id="ageRange">
+                     <option selected>Select</option>
+                     <option value="Highly Satisfied">Highly Satisfied</option>
+                     <option value="Satisfied" selected>Satisfied</option>
+                     <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
+                     <option value="dissatisfied">dissatisfied</option>
+                     <option value="Highly Dissatisfied">Highly Dissatisfied</option>
+                 </select>
+                 <%} else if (survey.answer5 == "Neither satisfied nor dissatisfied") 
+            {%> 
+              <select name="question5" class="form-control" id="ageRange">
+                     <option selected>Select</option>
+                     <option value="Highly Satisfied">Highly Satisfied</option>
+                     <option value="Satisfied">Satisfied</option>
+                     <option value="Neither satisfied nor dissatisfied" selected>Neither satisfied nor dissatisfied</option>
+                     <option value="dissatisfied">dissatisfied</option>
+                     <option value="Highly Dissatisfied">Highly Dissatisfied</option>
+                 </select>
+                 <%} else if (survey.answer5 == "dissatisfied") 
+            {%> 
+              <select name="question5" class="form-control" id="ageRange">
+                     <option selected>Select</option>
+                     <option value="Highly Satisfied">Highly Satisfied</option>
+                     <option value="Satisfied">Satisfied</option>
+                     <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
+                     <option value="dissatisfied" selected>dissatisfied</option>
+                     <option value="Highly Dissatisfied">Highly Dissatisfied</option>
+                 </select>
+                 <%} else  
+            {%> 
+              <select name="question5" class="form-control" id="ageRange">
+                     <option selected>Select</option>
+                     <option value="Highly Satisfied">Highly Satisfied</option>
+                     <option value="Satisfied">Satisfied</option>
+                     <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
+                     <option value="dissatisfied">dissatisfied</option>
+                     <option value="Highly Dissatisfied" selected>Highly Dissatisfied</option>
+                 </select>
+                <%}%>
+              </div>
 <br>
 
             <div class="from-group">
                 <div class="Q6"><label for="question6">6. Would you recommend this product and why?</label><br></div>
-                
+                <% if (survey.answer6 != " ")
+            {%>
                 <input type="text" class="form-control" id="question6" placeholder="Comment" name="question6"  />
+                <%}%>
             </div>
 <br>
    
