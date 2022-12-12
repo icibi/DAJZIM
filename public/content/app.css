@@ -37,11 +37,13 @@
 }
 
 .survey-container h1{
-    color: #b5bfdfc9;
+    color: #FFDFDE;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
 }
+
+
 
 .survey-container form{
     background-color: #6A7BA2;
@@ -123,6 +125,7 @@ body{
 #flip div:first-child {
   animation: show 4s linear infinite;
 }
+
 
 
 
