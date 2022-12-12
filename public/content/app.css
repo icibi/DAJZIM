@@ -89,7 +89,10 @@ body{
       
 }
 
-
+#reg, #un, #pw, #pl, #pr, #em, #dn
+{
+    color: aliceblue;
+}
 
 
 #container {
@@ -146,7 +149,7 @@ body{
     
 }
 
-.cq2, .cq4, .cq6
+.cq2, .cq4, .cq5, .cq6
 {
     background: #FFFFFF;
     border: none;
@@ -156,7 +159,7 @@ body{
     height: 400px;
 }
 
-.cq3, .cq5
+.cq3
 {
     background: #21313C;
     border: none;
