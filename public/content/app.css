@@ -1,6 +1,4 @@
 /* CSS for home page content */
-body{
-}
 
 #home_content {
     padding: 100px 0;
@@ -39,7 +37,7 @@ body{
 }
 
 .survey-container h1{
-    color: #6A7BA2;
+    color: #b5bfdfc9;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
