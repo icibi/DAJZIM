@@ -8,10 +8,10 @@
 
     <div class="row">
       <div class="col-md-offset-3 col-md-8">
+        <h1 id="survey_title"><%=title %></h1>
         <% if(typeof displayName == 'string' && displayName) { %>
-  
-        <!-- <a href="/createsurvey/add" class="btn btn-primary" role="button">
-        <i class ="fas fa-plus-circle"></i> Add Surveys -->
+          <a href="/surveylist2/result" class="btn btn-primary" role="button">
+            <i class ="fas fa-plus-circle"></i> Survey Result
         <%}%>
         </a>
         <br />
@@ -35,29 +35,6 @@
           </tr>
 
 
-
-
-
-          <% 
-          var a2f = 0;
-          var a2m = 0;
-          var a2n = 0;
-          var a4e = 0; 
-          var a4w = 0;
-          var a4m = 0;
-          var a4o = 0;
-          var a4l = 0;
-          var a5m = 0;
-          var a5y = 0;
-          var a513 = 0;
-          var a5o3 = 0;
-          var a5n = 0;
-          var a6vs = 0;
-          var a6s = 0;
-          var a6n = 0;
-          var a6u = 0;
-          var a6vu = 0;%>
-  
           <!--Repeatable Template row-->
           <% for (let count=0; count<Survey_List2.length; count++){%>
             <tr>
@@ -81,105 +58,9 @@
               </td>
             <%}%>
             </tr>
-
-            <% if(Survey_List2[count].answer5 == "Cricket") 
-          {
-            a5m++;
-          }
-          else if(Survey_List2[count].answer5 == "Football")
-          {
-            a5y++;
-          }
-          else if(Survey_List2[count].answer5 == "Badminton")
-          {
-            a513++;
-          }
-          else if(Survey_List2[count].answer5 == "None")
-          {
-            a5o3++;
-          }
-
-          if(Survey_List2[count].answer2 == "Yes") 
-          {
-            a2f++;
-          }
-          else if (Survey_List2[count].answer2 == "No")
-          {
-            a2m++;
-          }
-          else
-          {
-            a2n++;
-          }
-
-          if(Survey_List2[count].answer4 == "High School") 
-          {
-            a4e++;
-          }
-          else if(Survey_List2[count].answer4 == "College Diploma")
-          {
-            a4w++;
-          }
-          else if(Survey_List2[count].answer4 == "Degree")
-          {
-            a4m++;
-          }
-          else if(Survey_List2[count].answer4 == "None")
-          {
-            a4o++;
-          }
-          
-
-          if(Survey_List2[count].answer6 == "Very satisfied") 
-          {
-            a6vs++;
-          }
-          else if(Survey_List2[count].answer6 == "Satisfied")
-          {
-            a6s++;
-          }
-          else if(Survey_List2[count].answer6 == "Neutral")
-          {
-            a6n++;
-          }
-          else if(Survey_List2[count].answer6 == "Unsatisfied")
-          {
-            a6u++;
-          }
-          else
-          {
-            a6vu++;
-          }
-          
-          }%>
-
-          <h3>Survey Analysis</h3>
-          <p>Current students are: <%= a2f; %> |
-          Not current students: <%= a2m; %> 
-          <br><br>
-          The total number of students who have a favorite sport is cricket: <%= a5m; %> <br>
-          The total number of students who have a favorite sport is football: <%= a5y; %> <br>
-          The total number of students who have a favorite sport is badminton: <%= a513; %> <br>
-          The total number of students who don't have any favorite sports.: <%= a5o3; %> <br> <br>
-
-          The number of students who have previous education in High School: <%= a4e; %> <br>
-          The number of students who have a college diploma: <%= a4w; %> <br>
-          The number of students who have degrees: <%= a4m; %> <br>
-          People who don't have any educational background: <%= a4o; %> <br><br>
-
-          Very Satisfied: <%= a6vs; %> | Satisfied: <%= a6s; %> | Neutral: <%= a6n; %> | <br>
-          Unsatisfied: <%= a6u; %> | Very Unsatisfied: <%= a6vu; %>
-          </p>
-          <h1 id="survey_title"><%=title %></h1>
+         <%}%>
 
 
-
-
-
-
-
-
-        
         </table>
       </div>
     </div>

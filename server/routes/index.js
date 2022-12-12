@@ -90,7 +90,12 @@ router.get("/logout", indexController.performLogout);
 
 /* GET Route for displaying the survey 1 result page */
 router.get("/surveylist/result", indexController.surveyresult1);
-
+/* GET Route for displaying the survey 1 result page */
+router.get("/surveylist1/result", indexController.surveyresult2);
+/* GET Route for displaying the survey 1 result page */
+router.get("/surveylist2/result", indexController.surveyresult3);
+/* GET Route for displaying the survey 1 result page */
+router.get("/surveylist3/result", indexController.surveyresult4);
 
 /* GET previous surveys page. */
 

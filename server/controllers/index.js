@@ -32,9 +32,33 @@ module.exports.displaypricingpage = (req, res, next) => {
 };
 
 module.exports.surveyresult1 = (req, res, next) => {
-  
+
   res.render("surveys/result1", {
     title:"Nespresso - Customer Satisfaction Survey",
+    displayName: req.user ? req.user.displayName : "",
+  });
+};
+
+module.exports.surveyresult2 = (req, res, next) => {
+  
+  res.render("surveys/result2", {
+    title:"Customer Satisfaction Survey - Ardene",
+    displayName: req.user ? req.user.displayName : "",
+  });
+};
+
+module.exports.surveyresult3 = (req, res, next) => {
+  
+  res.render("surveys/result3", {
+    title:"Student survey",
+    displayName: req.user ? req.user.displayName : "",
+  });
+};
+
+module.exports.surveyresult4 = (req, res, next) => {
+  
+  res.render("surveys/result4", {
+    title:"Xbox Canada Survey",
     displayName: req.user ? req.user.displayName : "",
   });
 };
