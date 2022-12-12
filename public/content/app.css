@@ -187,3 +187,7 @@ body{
     text-align: center;
     padding: 2%;
 }
+#navbar
+{
+    background-color: rgb(240, 248, 255, 0.8);
+}
