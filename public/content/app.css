@@ -96,18 +96,30 @@ body{
     color: aliceblue;
 }
 
-
-#container {
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:100px;  
-  position:fixed;
-  width:100%;
-  bottom:65%;
-  display:block;
-  padding-left: 520px;
+.edit-container{
+    width: auto;
+    margin: auto;
+    align-content: center;
+    padding-top: 5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.edit-container h1{
+    color: #FFDFDE;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.edit-container form{
+    background-color: #6A7BA2;
+    color: #FFDFDE;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+
+
 
 #flip {
   height:50px;
@@ -127,6 +139,18 @@ body{
 }
 
 
+#container {
+    text-transform: uppercase;
+    font-size:36px;
+    font-weight:bold;
+    padding-top:100px;  
+    position:fixed;
+    width:100%;
+    bottom:65%;
+    display:block;
+    padding-left: 520px;
+  }
+  
 
 
 @keyframes show {

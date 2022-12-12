@@ -2,7 +2,7 @@
 <%- include ../partials/nav.ejs %>
 
 <!-- Content  for the add page -->
-<div class="container">
+<div class="edit-container">
   <div class="row">
     <div class="offset-md-3 col-md-6">
       <h1 id="survey3Edit_title"><%=title %></h1>
@@ -14,17 +14,14 @@
           <!-- <label class="form-check-label" for="surveyType">Marketing</label> -->
         </div>
 
-
-
         <div class="from-group">
             <div class="Q1"><label for="question1">1. What is your Name?</label><br></div>
             <% if (survey3.answer1 != " ")
             {%>
-            <input type="text" class="form-control" id="question1" placeholder="Name" name="question1"  />
+            <input type="text" class="form-control" id="question1" placeholder="Name" name="question1"  value="<%= survey3.answer1%>"/>
             <%}%>
           </div>
-<br>
-        
+ 
           <div class="from-group">
             <div class="Q2"> <label for="question2">2. What is your Gender?</label><br></div>
             <% if (survey3.answer2 == "Male") 
@@ -54,8 +51,6 @@
              <%}%>
            </div>
           <div class="from-group">
-
-<br>
 
             <div class="from-group">
                 <div class="Q3"> <label for="question3">3. What is your age gap?</label><br></div>
@@ -134,7 +129,6 @@
                </div>
                <%}%>
             </div>
-<br>
 
             <div class="from-group">
                 <div class="Q4"><label for="question4">4) How long you have been using xbox?</label><br></div>
@@ -189,7 +183,7 @@
                 <% if (survey3.answer5 == "Highly Satisfied") 
             {%>
                  <select name="question5" class="form-control" id="ageRange">
-                     <option selected>Select</option>
+                     <option >Select</option>
                      <option value="Highly Satisfied" selected>Highly Satisfied</option>
                      <option value="Satisfied">Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
@@ -199,7 +193,7 @@
                  <%} else if (survey3.answer5 == "Satisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
-                     <option selected>Select</option>
+                     <option >Select</option>
                      <option value="Highly Satisfied">Highly Satisfied</option>
                      <option value="Satisfied" selected>Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
@@ -209,7 +203,7 @@
                  <%} else if (survey3.answer5 == "Neither satisfied nor dissatisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
-                     <option selected>Select</option>
+                     <option >Select</option>
                      <option value="Highly Satisfied">Highly Satisfied</option>
                      <option value="Satisfied">Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied" selected>Neither satisfied nor dissatisfied</option>
@@ -219,7 +213,7 @@
                  <%} else if (survey3.answer5 == "dissatisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
-                     <option selected>Select</option>
+                     <option >Select</option>
                      <option value="Highly Satisfied">Highly Satisfied</option>
                      <option value="Satisfied">Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
@@ -229,7 +223,7 @@
                  <%} else  
             {%> 
               <select name="question5" class="form-control" id="ageRange">
-                     <option selected>Select</option>
+                     <option>Select</option>
                      <option value="Highly Satisfied">Highly Satisfied</option>
                      <option value="Satisfied">Satisfied</option>
                      <option value="Neither satisfied nor dissatisfied">Neither satisfied nor dissatisfied</option>
@@ -238,22 +232,41 @@
                  </select>
                 <%}%>
               </div>
-<br>
-
             <div class="from-group">
-                <div class="Q6"><label for="question6">6. Would you recommend this product and why?</label><br></div>
-                <% if (survey3.answer6 != " ")
+                <div class="Q6"><label for="question6">6. Would you recommend this product?</label><br></div>
+            <% if (survey3.answer6 == "Yes") 
             {%>
-                <input type="text" class="form-control" id="question6" placeholder="Comment" name="question6"  />
-                <%}%>
+                <select name="question6" class="form-control" id="recommend">
+                     <option >Select</option>
+                     <option value="Yes" selected>Yes</option>
+                     <option value="Maybe">Maybe</option>
+                     <option value="No">No</option>
+                 </select>
+
+            <%} else if (survey3.answer6 == "Maybe")
+            {%>
+                <select name="question6" class="form-control" id="recommend">
+                     <option >Select</option>
+                     <option value="Yes">Yes</option>
+                     <option value="Maybe" selected>Maybe</option>
+                     <option value="No">No</option>
+                 </select>
+            <%} else 
+            {%>
+                <select name="question6" class="form-control" id="recommend">
+                     <option >Select</option>
+                     <option value="Yes">Yes</option>
+                     <option value="Maybe" >Maybe</option>
+                     <option value="No" selected>No</option>
+                 </select>
+            <%}%>
             </div>
-<br>
-   
+            <br>
             <button class="btn btn-outline-light" type="submit">
               <i class="fas fa-edit"></i>Submit
             </button>
 
-            <a href="/templates" class="btn btn-outline-warning">
+            <a href="/surveylist3" class="btn btn-outline-warning">
               <i class="fas fa-undo"></i>Cancel
             </a>
       </form>

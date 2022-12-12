@@ -3,7 +3,7 @@
 
 <!--Content for the Edit page-->
 
-<div class="container">
+<div class="edit-container">
     <div class="row">
       <div class="offset-md-3 col-md-6">
         <h1 id="survey1Edit_title"><%=title %></h1>
@@ -26,7 +26,7 @@
            </div>
     
           <div class="from-group">
-            <label for="question1">Q2: How would you rate your shopping experince today?</label><br>
+            <label for="question1">Q2: How would you rate your shopping experience today?</label><br>
              <% if (survey1.answer2 == "Poor") 
             {%>
             <div class="form-check form-check-inline">
@@ -357,7 +357,7 @@
             {%>
             <select name="question5" class="form-control" id="ageRange">
                 <option>Choose...</option>
-                <option value="Very satisfied">Very satisfied</option>
+                <option value="Very satisfied" selected>Very satisfied</option>
                 <option value="Satisfied">Satisfied</option>
                 <option value="Neutral">Neutral</option>
                 <option value="Unsatisfied">Unsatisfied</option>
@@ -367,7 +367,7 @@
             {%> 
             <select name="question5" class="form-control" id="ageRange">
                 <option>Choose...</option>
-                <option value="Very satisfied" selected>Very satisfied</option>
+                <option value="Very satisfied">Very satisfied</option>
                 <option value="Satisfied" selected>Satisfied</option>
                 <option value="Neutral">Neutral</option>
                 <option value="Unsatisfied">Unsatisfied</option>
@@ -405,11 +405,11 @@
             <%}%>
           </div>
           <br>
-          <button class="btn btn-primary" type="submit">
+          <button class="btn btn-outline-light" type="submit">
             <i class="fas fa-edit"></i>Submit
           </button>
   
-          <a href="/surveylist1" class="btn btn-warning">
+          <a href="/surveylist1" class="btn btn-outline-warning">
             <i class="fas fa-undo"></i>Cancel
           </a>
   
