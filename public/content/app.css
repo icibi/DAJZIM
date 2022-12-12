@@ -89,7 +89,10 @@ body{
       
 }
 
-
+#reg, #un, #pw, #pl, #pr, #em, #dn
+{
+    color: aliceblue;
+}
 
 
 #container {
