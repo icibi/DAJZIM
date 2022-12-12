@@ -52,13 +52,101 @@
 
 </div>    
      
+
 <div class="from-group">
-              <label for="question2">Enter your field of Interest</label><br>
-            <% if (survey2.answer3 != " ")
-            {%>
-              <input type="text" class="form-control" id="question2" placeholder="Enter your name" name="question2" value="<%= survey2.answer3 %>" />
-            <%}%>
-           </div>
+         <label for="question2">Select Field of Interest?</label><br>
+            <% if (survey2.answer3 == "Computer science")
+          {%>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency1" value="Computer science" checked>
+                <label class="form-check-label" for="frequency1">Computer science</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency2" value="Avation">
+                <label class="form-check-label" for="frequency2">Avation</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency4" value="Mechincal">
+                <label class="form-check-label" for="frequency4">Mechincal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency5" value="Arts">
+                <label class="form-check-label" for="frequency5">Arts</label>
+            </div>
+             <%} else if (survey2.answer3 == "Avation")
+          {%>
+       
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency1" value="Computer science">
+                <label class="form-check-label" for="frequency1">Computer science</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency2" value="Avation" checked>
+                <label class="form-check-label" for="frequency2">Avation</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency4" value="Mechincal">
+                <label class="form-check-label" for="frequency4">Mechincal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency5" value="Arts">
+                <label class="form-check-label" for="frequency5">Arts</label>
+            </div>
+
+
+            <%}
+          else if (survey2.answer3 == "Mechincal")
+          {%>
+           
+    
+
+    <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency1" value="Computer science">
+                <label class="form-check-label" for="frequency1">Computer science</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency2" value="Avation">
+                <label class="form-check-label" for="frequency2">Avation</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency4" value="Mechincal" checked>
+                <label class="form-check-label" for="frequency4">Mechincal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency5" value="Arts">
+                <label class="form-check-label" for="frequency5">Arts</label>
+            </div>
+
+
+            <%} 
+            else 
+          {%>
+            
+            
+      <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency1" value="Computer science" >
+                <label class="form-check-label" for="frequency1">Computer science</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency2" value="Avation">
+                <label class="form-check-label" for="frequency2">Avation</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency4" value="Mechincal">
+                <label class="form-check-label" for="frequency4">Mechincal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="question2" id="frequency5" value="Arts" checked>
+                <label class="form-check-label" for="frequency5">Arts</label>
+            </div>
+
+
+          <%}%>
+        </div>
+
+
+
 
 <div class="from-group">
          <label for="question3">What previous education do you have?</label><br>
@@ -302,3 +390,4 @@
 
 <!--HTML Footer part-->
 <%- include ../partials/footer.ejs %> 
+
