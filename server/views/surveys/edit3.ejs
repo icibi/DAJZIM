@@ -2,10 +2,10 @@
 <%- include ../partials/nav.ejs %>
 
 <!-- Content  for the add page -->
-<div class="survey-container">
+<div class="container">
   <div class="row">
     <div class="offset-md-3 col-md-6">
-      <h1 id="business_title"><%=title %></h1>
+      <h1 id="survey3Edit_title"><%=title %></h1>
 
       <form class="form" method="post">
 
@@ -18,7 +18,7 @@
 
         <div class="from-group">
             <div class="Q1"><label for="question1">1. What is your Name?</label><br></div>
-            <% if (survey.answer1 != " ")
+            <% if (survey3.answer1 != " ")
             {%>
             <input type="text" class="form-control" id="question2" placeholder="Name" name="question1"  />
             <%}%>
@@ -27,7 +27,7 @@
         
           <div class="from-group">
             <div class="Q2"> <label for="question2">2. What is your Gender?</label><br></div>
-            <% if (survey.answer2 == "Male") 
+            <% if (survey3.answer2 == "Male") 
             {%>
              <select name="question2" class="form-control" id="ageRange">
                  <option selected>Select</option>
@@ -35,7 +35,7 @@
                  <option value="Female">Female</option>
                  <option value="Other">Other</option>
              </select>
-             <%} else if (survey.answer2 == "Female") 
+             <%} else if (survey3.answer2 == "Female") 
             {%> 
               <select name="question2" class="form-control" id="ageRange">
                  <option selected>Select</option>
@@ -59,7 +59,7 @@
 
             <div class="from-group">
                 <div class="Q3"> <label for="question3">3. What is your age gap?</label><br></div>
-                <% if (survey.answer3 == "3-10 years") 
+                <% if (survey3.answer3 == "3-10 years") 
             {%>
                    <div class="form-check form-check-inline">
                        <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years" checked >
@@ -77,7 +77,7 @@
                        <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older">
                        <label class="form-check-label" for="frequency4">d) 31- older</label>
                    </div>
-                   <%} else if (survey.answer3 == "11-20 years") 
+                   <%} else if (survey3.answer3 == "11-20 years") 
             {%> 
               <div class="form-check form-check-inline">
                        <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years">
@@ -95,7 +95,7 @@
                        <input class="form-check-input" type="radio" name="question3" id="h4" value="31- older">
                        <label class="form-check-label" for="frequency4">d) 31- older</label>
                    </div>
-                   <%} else if (survey.answer3 == "21-30 years") 
+                   <%} else if (survey3.answer3 == "21-30 years") 
             {%> 
               <div class="form-check form-check-inline">
                        <input class="form-check-input" type="radio" name="question3" id="h1" value="3-10 years">
@@ -138,7 +138,7 @@
 
             <div class="from-group">
                 <div class="Q4"><label for="question4">4) How long you have been using xbox?</label><br></div>
-                <% if (survey.answer4 == "Cricket") 
+                <% if (survey3.answer4 == "Cricket") 
             {%>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket" checked>
@@ -152,7 +152,7 @@
                     <input class="form-check-input" type="checkbox" name="question4" id="g3" value="badminton">
                     <label class="form-check-label" for="g3">c) more than 3 years</label>
                 </div>
-                <%} else if (survey.answer4 == "Football") 
+                <%} else if (survey3.answer4 == "Football") 
             {%> 
               <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="question4" id="g1" value="Cricket">
@@ -186,7 +186,7 @@
 
               <div class="from-group">
                 <div class="Q5"> <label for="question5">5) How satisfied you are with the product?</label><br></div>
-                <% if (survey.answer5 == "Highly Satisfied") 
+                <% if (survey3.answer5 == "Highly Satisfied") 
             {%>
                  <select name="question5" class="form-control" id="ageRange">
                      <option selected>Select</option>
@@ -196,7 +196,7 @@
                      <option value="dissatisfied">dissatisfied</option>
                      <option value="Highly Dissatisfied">Highly Dissatisfied</option>
                  </select>
-                 <%} else if (survey.answer5 == "Satisfied") 
+                 <%} else if (survey3.answer5 == "Satisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
                      <option selected>Select</option>
@@ -206,7 +206,7 @@
                      <option value="dissatisfied">dissatisfied</option>
                      <option value="Highly Dissatisfied">Highly Dissatisfied</option>
                  </select>
-                 <%} else if (survey.answer5 == "Neither satisfied nor dissatisfied") 
+                 <%} else if (survey3.answer5 == "Neither satisfied nor dissatisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
                      <option selected>Select</option>
@@ -216,7 +216,7 @@
                      <option value="dissatisfied">dissatisfied</option>
                      <option value="Highly Dissatisfied">Highly Dissatisfied</option>
                  </select>
-                 <%} else if (survey.answer5 == "dissatisfied") 
+                 <%} else if (survey3.answer5 == "dissatisfied") 
             {%> 
               <select name="question5" class="form-control" id="ageRange">
                      <option selected>Select</option>
@@ -242,7 +242,7 @@
 
             <div class="from-group">
                 <div class="Q6"><label for="question6">6. Would you recommend this product and why?</label><br></div>
-                <% if (survey.answer6 != " ")
+                <% if (survey3.answer6 != " ")
             {%>
                 <input type="text" class="form-control" id="question6" placeholder="Comment" name="question6"  />
                 <%}%>

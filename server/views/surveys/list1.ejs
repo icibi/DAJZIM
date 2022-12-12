@@ -4,11 +4,11 @@
 
 <!-- Main Content -->
 <main class="container" style="text-align:center; align-items: center; width:750px; background-color: lightgray; opacity: 0.8;">
-  <section id="survey">
+  <section class="survey">
 
     <div class="row">
       <div class="col-md-offset-3 col-md-8">
-        <h1 id="survey_title"><%=title %></h1>
+        <h1 class="survey_title"><%=title %></h1>
         <% if(typeof displayName == 'string' && displayName) { %>
   
         <a href="/surveylist1/result" class="btn btn-dark" role="button">
@@ -47,11 +47,11 @@
 
               <% if(typeof displayName == 'string' && displayName) { %>
               <td class="text-center col-1">
-                <a href="/surveylist1/edit1/<%= Survey_List1[count]._id %>" class="btn btn-primary btn-sm">
+                <a href="/surveylist1/edit1/<%= Survey_List1[count]._id %>" class="btn btn-outline-secondary btn-sm">
                 <i class="fas fa-pencil-alt"></i> Edit</a>
               </td>
               <td class="text-center col-1">
-                  <a href="/surveylist1/delete/<%= Survey_List1[count]._id %>" class="btn btn-danger btn-sm">
+                  <a href="/surveylist1/delete/<%= Survey_List1[count]._id %>" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-trash-alt"></i> Delete</a>
               </td>
             <%}%>
