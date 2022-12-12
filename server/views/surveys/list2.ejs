@@ -6,8 +6,10 @@
 <main class="container" style="text-align:center; align-items: center; width:750px; background-color: lightgray; opacity: 0.8;">
   <section id="survey">
 
+    
     <div class="row">
       <div class="col-md-offset-3 col-md-8">
+
         <h1 id="survey_title"><%=title %></h1>
         <% if(typeof displayName == 'string' && displayName) { %>
           <a href="/surveylist2/result" class="btn btn-primary" role="button">
@@ -25,7 +27,6 @@
             <th class="text-center col-4">Previous education</th>
             <th class="text-center col-4">Favorite sport</th>
             <th class="text-center col-3">Satisfied</th>
-           
             
             <% if(typeof displayName == 'string' && displayName) { %>
   
@@ -34,18 +35,16 @@
             <%}%>
           </tr>
 
-
           <!--Repeatable Template row-->
           <% for (let count=0; count<Survey_List2.length; count++){%>
             <tr>
-              <td class="text-centre col-3"><%=Survey_List2[count].surveyType %></td>
-              <td class="text-centre col-3"><%=Survey_List2[count].answer1 %></td>
-              <td class="text-centre col-3"><%=Survey_List2[count].answer2 %></td>
-              <td class="text-centre col-3"><%=Survey_List2[count].answer3 %></td>
-              <td class="text-centre col-4"><%=Survey_List2[count].answer4 %></td>
-              <td class="text-centre col-4"><%=Survey_List2[count].answer5 %></td>
-             <td class="text-centre col-3"><%=Survey_List2[count].answer6 %></td> 
-           
+              <td class="text-center "><%=Survey_List2[count].surveyType %></td>
+              <td class="text-center "><%=Survey_List2[count].answer1 %></td>
+              <td class="text-center "><%=Survey_List2[count].answer2 %></td>
+              <td class="text-center "><%=Survey_List2[count].answer3 %></td>
+              <td class="text-center "><%=Survey_List2[count].answer4 %></td>
+              <td class="text-center "><%=Survey_List2[count].answer5 %></td>
+              <td class="text-center "><%=Survey_List2[count].answer6 %></td>
 
               <% if(typeof displayName == 'string' && displayName) { %>
               <td class="text-center col-1">
@@ -58,16 +57,15 @@
               </td>
             <%}%>
             </tr>
-         <%}%>
 
+          <%}%>
 
         </table>
       </div>
     </div>
 </section>
 </main>
-
-
+  
 
 <!--HTML Footer part-->
 <%- include ../partials/footer.ejs %> 
