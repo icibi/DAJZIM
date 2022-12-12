@@ -7,6 +7,9 @@ let passport = require("passport");
 let userModel = require("../models/user");
 let User = userModel.User; //alias
 
+
+
+
 module.exports.displayHomepage = (req, res, next) => {
   res.render("index", {
     title: "Home",
@@ -27,6 +30,16 @@ module.exports.displaypricingpage = (req, res, next) => {
     displayName: req.user ? req.user.displayName : "",
   });
 };
+
+module.exports.surveyresult1 = (req, res, next) => {
+  
+  res.render("surveys/result1", {
+    title:"Nespresso - Customer Satisfaction Survey",
+    displayName: req.user ? req.user.displayName : "",
+  });
+};
+
+
 
 
 module.exports.displayLoginPage = (req, res, next) => {
