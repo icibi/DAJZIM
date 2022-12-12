@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+<nav class="navbar navbar-expand-xl navbar-light" id="navbar">
   <a class="navbar-brand" href="/"><img src="assets/images/logo.png" alt="logo" width="50px" height="50px"> DAZJIM</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,20 +8,20 @@
     <ul class="navbar-nav ml-auto">
 
       <li class="nav-item active">
-        <a class="nav-link" href="/home"> <i class="fa-solid fa-house"></i> Home</a>
+        <a class="nav-link" href="/home"> <i class="fa-solid fa-landmark"></i> Home</a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="/templates"> <i class="fa-solid fa-list"></i> Surveys</a>
+        <a class="nav-link" href="/templates"> <i class="fa-solid fa-layer-group"></i> Surveys</a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="/pricing"> <i class="fa-sharp fa-solid fa-money-check-dollar"></i> Pricing</a>
+        <a class="nav-link" href="/pricing"> <i class="fa-solid fa-money-bill"></i> Pricing</a>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         <i class="fa-sharp fa-solid fa-clipboard"></i> Previous Surveys
+         <i class="fa-solid fa-folder-open"></i> Previous Surveys
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="/surveylist">Nespresso</a></li>
@@ -32,12 +32,12 @@
       </li>
 
         <% if(typeof displayName == 'string' && displayName) { %>
-          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="navbar-text"><i class="fa-solid fa-circle-user"></i> Welcome, <%= displayName %></li>
           <li class="nav-item"><a href="/logout" class="nav-link">
-            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+            <i class="fa-solid fa-chevron-up"></i> Logout</a></li>
         <% } else { %>
           <li class="nav-item"><a href="/login" class="nav-link">
-            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+            <i class="fa-solid fa-chevron-down"></i> Login</a></li>
         <% } %>
       
     </ul>
