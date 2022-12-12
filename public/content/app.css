@@ -140,13 +140,13 @@ body{
     opacity: 0.2;
 }
 
-#chart_question2, #chart_question4
+.chart_question2, .chart_question4
 {
     float: left;
     
 }
 
-#cq2, #cq4, #cq6
+.cq2, .cq4, .cq6
 {
     background: #FFFFFF;
     border: none;
@@ -156,7 +156,7 @@ body{
     height: 400px;
 }
 
-#cq3, #cq5
+.cq3, .cq5
 {
     background: #21313C;
     border: none;
@@ -166,18 +166,18 @@ body{
     height: 400px;
 }
 
-#chart_question3, #chart_question5
+.chart_question3, .chart_question5
 {
     float: right;
 }
 
-#cq6
+.cq6
 {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-#sac
+.sac
 {
     color: rgb(240, 248, 255, 0.8);
     font-weight: bolder;
