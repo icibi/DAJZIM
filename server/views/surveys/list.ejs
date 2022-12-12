@@ -49,11 +49,11 @@
 
               <% if(typeof displayName == 'string' && displayName) { %>
               <td class="text-center col-1">
-                <a href="/surveylist/edit/<%= Survey_List[count]._id %>" class="btn btn-primary btn-sm">
+                <a href="/surveylist/edit/<%= Survey_List[count]._id %>" class="btn btn-outline-secondary btn-sm">
                 <i class="fas fa-pencil-alt"></i> Edit</a>
               </td>
               <td class="text-center col-1">
-                  <a href="/surveylist/delete/<%= Survey_List[count]._id %>" class="btn btn-danger btn-sm">
+                  <a href="/surveylist/delete/<%= Survey_List[count]._id %>" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-trash-alt"></i> Delete</a>
               </td>
             <%}%>
