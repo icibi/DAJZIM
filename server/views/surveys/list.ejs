@@ -3,21 +3,22 @@
   
 
 <!-- Main Content -->
-<main class="container">
+<main class="container" style="text-align:center; align-items: center; width:750px; background-color: lightgray; opacity: 0.8;">
   <section id="survey">
 
     
     <div class="row">
       <div class="col-md-offset-3 col-md-8">
-       <!-- <h1 id="survey_title"><%=title %></h1>-->
+       <h1 id="survey_title"><%=title %></h1>
         <% if(typeof displayName == 'string' && displayName) { %>
-  
-        <!-- <a href="/createsurvey/add" class="btn btn-primary" role="button">
-        <i class ="fas fa-plus-circle"></i> Add Surveys -->
+        
+        <a href="/surveylist/result" class="btn btn-primary" role="button">
+        <i class ="fas fa-plus-circle"></i> Survey Result
+         
         <%}%>
         </a>
         <br />
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover" style="width:730px; background-color: lightgray; opacity: 0.8;">
           <!--HEader row-->
           <tr>
             <th class="text-center">Survey Type</th>
@@ -35,26 +36,6 @@
             <%}%>
           </tr>
   
-          
-          <% 
-          var a2f = 0;
-          var a2m = 0;
-          var a2n = 0;
-          var a4e = 0; 
-          var a4w = 0;
-          var a4m = 0;
-          var a4o = 0;
-          var a4l = 0;
-          var a5m = 0;
-          var a5y = 0;
-          var a513 = 0;
-          var a5o3 = 0;
-          var a5n = 0;
-          var a6vs = 0;
-          var a6s = 0;
-          var a6n = 0;
-          var a6u = 0;
-          var a6vu = 0;%>
           <!--Repeatable Template row-->
           <% for (let count=0; count<Survey_List.length; count++){%>
             <tr>
@@ -77,102 +58,7 @@
               </td>
             <%}%>
             </tr>
-          <% if(Survey_List[count].answer5 == "Less than a month") 
-          {
-            a5m++;
-          }
-          else if(Survey_List[count].answer5 == "1-12 months")
-          {
-            a5y++;
-          }
-          else if(Survey_List[count].answer5 == "1-3 years")
-          {
-            a513++;
-          }
-          else if(Survey_List[count].answer5 == "over 3 years")
-          {
-            a5o3++;
-          }
-          else
-          {
-            a5n++;
-          }
-
-          if(Survey_List[count].answer2 == "Female") 
-          {
-            a2f++;
-          }
-          else if (Survey_List[count].answer2 == "Male")
-          {
-            a2m++;
-          }
-          else
-          {
-            a2n++;
-          }
-
-          if(Survey_List[count].answer4 == "Everyday") 
-          {
-            a4e++;
-          }
-          else if(Survey_List[count].answer4 == "2 or 3 times a week")
-          {
-            a4w++;
-          }
-          else if(Survey_List[count].answer4 == "2 or 3 times a month")
-          {
-            a4m++;
-          }
-          else if(Survey_List[count].answer4 == "Once a month")
-          {
-            a4o++;
-          }
-          else
-          {
-            a4l++;
-          }
-
-          if(Survey_List[count].answer6 == "Very satisfied") 
-          {
-            a6vs++;
-          }
-          else if(Survey_List[count].answer6 == "Satisfied")
-          {
-            a6s++;
-          }
-          else if(Survey_List[count].answer6 == "Neutral")
-          {
-            a6n++;
-          }
-          else if(Survey_List[count].answer6 == "Unsatisfied")
-          {
-            a6u++;
-          }
-          else
-          {
-            a6vu++;
-          }
-          
-          }%>
-          <h3>Survey Analysis</h3>
-          <p>Number of Female responders: <%= a2f; %> |
-          Number of Male responders: <%= a2m; %> |
-          Number of prefer not to answer: <%= a2n; %> <br><br>
-          The number of people who have used Nespresso for Less than a month is: <%= a5m; %> <br>
-          The number of people who have used Nespresso for 1-12 month is: <%= a5y; %> <br>
-          The number of people who have used Nespresso for 1-3 years is: <%= a513; %> <br>
-          The number of people who have used Nespresso for over 3 years is: <%= a5o3; %> <br>
-          The number of people who have not used Nespresso is: <%= a5n; %> <br> <br>
-
-          The number of people who uses Nespresso everyday: <%= a4e; %> <br>
-          The number of people who uses Nespresso 2 or 3 times a week: <%= a4w; %> <br>
-          The number of people who uses Nespresso 2 or 3 times a month: <%= a4m; %> <br>
-          The number of people who uses Nespresso once a month: <%= a4o; %> <br>
-          The number of people who uses Nespresso less than once a month: <%= a4l; %> <br><br>
-
-          Very Satisfied: <%= a6vs; %> | Satisfied: <%= a6s; %> | Neutral: <%= a6n; %> | Unsatisfied: <%= a6u; %> | Very Unsatisfied: <%= a6vu; %>
-          </p>
-          <h1 id="survey_title"><%=title %></h1>
+          <%}%>
         </table>
       </div>
     </div>

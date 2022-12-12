@@ -20,6 +20,7 @@ router.get("/templates", indexController.displaytemplatespage);
 router.get("/pricing", indexController.displaypricingpage);
 
 
+
 /* link to /template1/login */
 /* GET Route for displaying the Login page */
 router.get("/template1/login", indexController.displayLoginPage);
@@ -87,6 +88,8 @@ router.post("/register", indexController.processRegisterPage);
 /* GET to perform UserLogout */
 router.get("/logout", indexController.performLogout);
 
+/* GET Route for displaying the survey 1 result page */
+router.get("/surveylist/result", indexController.surveyresult1);
 
 
 /* GET previous surveys page. */
