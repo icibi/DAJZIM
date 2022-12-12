@@ -2,36 +2,26 @@
 <%- include ../partials/nav.ejs %>
 
 <div class="chart_container">
+
     <h1 class="sac">Survey Analysis Charts</h1>
     <div class="chart_question2">
 
-        <iframe style="opacity: 0.8; background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=63968646-7749-464b-848d-63331aabd94d&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
-
         <iframe class="cq2" style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=63968646-7749-464b-848d-63331aabd94d&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
-
     </div>
     <div class="chart_question3">
         <iframe class="cq3" style="background: #21313C;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=63969696-8b4b-4d43-883f-ec008b09c244&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
     </div>
     <div class="chart_question4">
-
-        <iframe style="opacity: 0.8; background: #21313C;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=639686a9-52ab-415a-818a-e91db361dfed&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
+        <iframe class="cq4" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=639686a9-52ab-415a-818a-e91db361dfed&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
     </div>
     <div class="chart_question5">
-        <iframe style="opacity: 0.8; background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=6396872c-7749-4a2b-8c80-63331aac5472&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
-    </div>
-    <div class="chart_question6">
-        <iframe style="opacity: 0.8; background: #21313C;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=63968796-e777-4444-8d8c-0c5b6895a742&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
-
-        <iframe class="cq4" style="background: #21313C;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=639686a9-52ab-415a-818a-e91db361dfed&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
-    </div>
-    <div class="chart_question5">
-        <iframe class="cq5" style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=6396872c-7749-4a2b-8c80-63331aac5472&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+        <iframe class="cq5" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=6396872c-7749-4a2b-8c80-63331aac5472&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
     </div>
     <div class="chart_question6">
         <iframe class="cq6" style="background: #21313C;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-comp229_assignment-qnhvg/embed/charts?id=63968796-e777-4444-8d8c-0c5b6895a742&maxDataAge=3600&theme=dark&autoRefresh=true"></iframe>
 
     </div>
+    <input type="button" value="Print This Page" onclick="window.print(); return false;" />
 </div>
 <!--HTML Footer part-->
 <%- include ../partials/footer.ejs %> 
