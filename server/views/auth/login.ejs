@@ -23,10 +23,10 @@
 
   <div class="row">
     <div class="offset-md-6 col-md-6">
-      <h1 class="login_title">Please Login</h1>
+      <h1 class="login_title" id="pl">Please Login</h1>
       <form method="POST" autocomplete="off">
         <fieldset class="form-group">
-          <label for="username">Username: </label>
+          <label for="username" id="un">Username: </label>
           <input
             type="text"
             class="form-control"
@@ -39,7 +39,7 @@
         </fieldset>
 
         <fieldset class="form-group">
-          <label for="password">Password: </label>
+          <label for="password" id="pw">Password: </label>
           <input
             type="password"
             class="form-control"
@@ -49,13 +49,13 @@
             required
           />
         
-          <a href="/register">Register Here</a>
+          <a href="/register" id="reg">Register Here</a>
         </fieldset>
 
         <fieldset class="form-group text-right">
-          <input type="submit" class="btn btn-success" value="Login" />
+          <input type="submit" class="btn btn-outline-light" value="Login" />
           <a href="/">
-            <input type="button" class="btn btn-warning" value="Cancel" />
+            <input type="button" class="btn btn-outline-warning" value="Cancel" />
           </a>
         </fieldset>
       </form>

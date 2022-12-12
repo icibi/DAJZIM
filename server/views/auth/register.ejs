@@ -2,6 +2,7 @@
 <%- include ../partials/nav.ejs %>
 
 <main class="container">
+  <br>
     <!-- Message Area -->
     <% if(messages.length > 0) {%>
     <div class="alert alert-danger"><%= messages %></div>
@@ -9,10 +10,10 @@
   
     <div class="row">
       <div class="offset-md-4 col-md-4">
-        <h1>Please Register</h1>
+        <h1 id="pr">Please Register</h1>
         <form method="POST" autocomplete="off">
           <fieldset class="form-group">
-            <label for="username">Username: </label>
+            <label for="username" id="un">Username: </label>
             <input
               type="text"
               class="form-control"
@@ -23,9 +24,9 @@
               autofocus
             />
           </fieldset>
-  
+          <br>
           <fieldset class="form-group">
-            <label for="password">Password: </label>
+            <label for="password" id="pw">Password: </label>
             <input
               type="password"
               class="form-control"
@@ -34,25 +35,27 @@
               id="password"
               required
             />
+            </fieldset>
+            <br>
             <fieldset class="form-group">
-              <label for="email">Email: </label>
+              <label for="email" id="em">Email: </label>
               <input type="email" class="form-control"
               name="email" placeholder="Enter Email Address"
               id="email" required>
           </fieldset>
-  
+          <br>
           <fieldset class="form-group">
-              <label for="displayName">Display Name: </label>
+              <label for="displayName" id="dn">Display Name: </label>
               <input type="text" class="form-control"
               name="displayName" placeholder="Enter Display Name"
               id="displayName" required>
           </fieldset>
           
-  
+          <br>
           <fieldset class="form-group text-right">
-            <input type="submit" class="btn btn-success" value="Register" />
+            <input type="submit" class="btn btn-outline-light" value="Register" />
             <a href="/">
-              <input type="button" class="btn btn-warning" value="Cancel" />
+              <input type="button" class="btn btn-outline-warning" value="Cancel" />
             </a>
           </fieldset>
         </form>
